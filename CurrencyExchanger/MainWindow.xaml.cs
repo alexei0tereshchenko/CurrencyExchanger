@@ -1,4 +1,6 @@
-﻿namespace CurrencyExchanger
+﻿using DMSkin.WPF.Small;
+
+namespace CurrencyExchanger
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
