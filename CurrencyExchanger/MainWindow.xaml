@@ -25,28 +25,37 @@
                      WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="182"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="182" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Border>
             <Grid>
                 <Border>
-                    <Image gif:ImageBehavior.AnimatedSource="Images/back.gif" Stretch="Fill"  />
+                    <Image gif:ImageBehavior.AnimatedSource="Images/back.gif" Stretch="Fill" />
                 </Border>
-                <Border Background="#00FFFFFF"/>
-                <TextBlock Margin="0,9,70,0" 
-                           Text="&#xe971;" VerticalAlignment="Top" HorizontalAlignment="Right"  FontSize="12"/>
+                <Border Background="#00FFFFFF" />
             </Grid>
         </Border>
-        <TextBlock HorizontalAlignment="Left" Text="Please, enter your credentials" TextAlignment="Center" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="412" FontSize="16" FontWeight="Bold" Foreground="#FF44617E"/>
-        <TextBox Name ="LoginBox" HorizontalAlignment="Left" Height="23" Margin="156,38,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Login" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="121"/>
-        <PasswordBox Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="156,74,0,0" Grid.Row="1" PasswordChar="*" Password="dfgsfsgdf" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="121"/>
-        <Button Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="179,111,180,0" Grid.Row="1" VerticalAlignment="Top" Width="73"/>
+        <TextBlock HorizontalAlignment="Left" Text="Please, enter your credentials" TextAlignment="Center"
+                   Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="412"
+                   FontSize="16" FontWeight="Bold" Foreground="#FF44617E" />
+        <TextBox Name="LoginBox" HorizontalAlignment="Left" Height="23" Margin="156,38,0,0" Grid.Row="1"
+                 TextWrapping="Wrap" Text="Username" HorizontalContentAlignment="Center" Foreground="DarkGray"
+                 VerticalContentAlignment="Center" VerticalAlignment="Top" Width="121" GotKeyboardFocus="LoginBox_GotKeyboardFocus"
+                 LostKeyboardFocus="LoginBox_LostKeyboardFocus"/>
+        <PasswordBox Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="156,74,0,0" Grid.Row="1"
+                     Password="Password" Foreground="DarkGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                     VerticalAlignment="Top" Width="121" 
+                     GotKeyboardFocus="PasswordBox_GotKeyboardFocus"
+                     LostKeyboardFocus="PasswordBox_LostKeyboardFocus"/>
+        <Button Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="179,111,180,0" Grid.Row="1"
+                VerticalAlignment="Top" Width="73" 
+                 Click="SubmitButton_OnClick"/>
 
         <Grid.Background>
             <LinearGradientBrush>
-                <GradientStop Color="AliceBlue" Offset="0.1"/>
-                <GradientStop Color="DarkGray" Offset="1"/>
+                <GradientStop Color="AliceBlue" Offset="0.1" />
+                <GradientStop Color="DarkGray" Offset="1" />
             </LinearGradientBrush>
         </Grid.Background>
     </Grid>
