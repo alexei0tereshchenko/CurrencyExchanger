@@ -89,5 +89,8 @@
   <ItemGroup>
     <Resource Include="Images\back.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
