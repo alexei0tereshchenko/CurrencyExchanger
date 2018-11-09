@@ -31,7 +31,7 @@
         <Border>
             <Grid>
                 <Border>
-                    <Image gif:ImageBehavior.AnimatedSource="Images/back.gif" Stretch="Fill" />
+                    <Image gif:ImageBehavior.AnimatedSource="/Images/back.gif" Stretch="Fill" />
                 </Border>
                 <Border Background="#00FFFFFF" />
             </Grid>
@@ -48,7 +48,7 @@
                      VerticalAlignment="Top" Width="121" 
                      GotKeyboardFocus="PasswordBox_GotKeyboardFocus"
                      LostKeyboardFocus="PasswordBox_LostKeyboardFocus"/>
-        <Button Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="179,111,180,0" Grid.Row="1"
+        <Button IsDefault="True" Content="Submit" HorizontalAlignment="Left" Margin="179,111,180,0" Grid.Row="1"
                 VerticalAlignment="Top" Width="73" 
                  Click="SubmitButton_OnClick"/>
 

@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using CurrencyExchanger.pages;
 using DMSkin.WPF.Small;
 
 namespace CurrencyExchanger
@@ -50,9 +52,10 @@ namespace CurrencyExchanger
 
         private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var administratorWindow = new AdministratorWindow();
+            var workWindow = new WorkWindow();
             this.Close();
-            administratorWindow.Show();
+            //workWindow.ContentSource = new Uri("/pages/AdministratorPage.xaml");
+            workWindow.Show();
         }
     }
 }
