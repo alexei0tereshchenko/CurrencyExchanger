@@ -117,6 +117,10 @@
                         </ComboBox>
                     </StackPanel>
                     <StackPanel>
+                        <Label Content="E-mail" Target="{Binding ElementName=Email}"/>
+                        <TextBox x:Name="Email" Width="150"/>
+                    </StackPanel>
+                    <StackPanel>
                         <Label Content="Zip code" Target="{Binding ElementName=TextZipCode}"/>
                         <TextBox x:Name="TextZipCode" Width="150" />
                     </StackPanel>
