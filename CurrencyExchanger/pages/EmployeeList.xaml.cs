@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CurrencyExchanger.pages
 {
     /// <summary>
-    /// Interaction logic for AdministratorPage.xaml
+    /// Interaction logic for EmployeeList.xaml
     /// </summary>
-    public partial class AdministratorPage : UserControl
+    public partial class EmployeeList : UserControl
     {
-        public AdministratorPage()
+        public EmployeeList()
         {
             InitializeComponent();
         }
