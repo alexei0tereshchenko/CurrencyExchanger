@@ -11,8 +11,8 @@
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="Administrator controls">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Employees" Source="/pages/EmployeeList.xaml"/>
-                <mui:Link DisplayName="Report"/>
+                <mui:Link DisplayName="Employees" Source="/Pages/EmployeeList.xaml"/>
+                <mui:Link DisplayName="Report" Source="/Pages/ReportList.xaml"/>
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
     </mui:ModernWindow.MenuLinkGroups>

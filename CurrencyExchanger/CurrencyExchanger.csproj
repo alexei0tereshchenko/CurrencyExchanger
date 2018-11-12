@@ -62,10 +62,17 @@
     <Compile Include="Content\Employee.xaml.cs">
       <DependentUpon>Employee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Content\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeLoader.cs" />
     <Compile Include="Pages\EmployeeList.xaml.cs">
       <DependentUpon>EmployeeList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ReportList.xaml.cs">
+      <DependentUpon>ReportList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLoader.cs" />
     <Compile Include="Windows\WorkWindow.xaml.cs">
       <DependentUpon>WorkWindow.xaml</DependentUpon>
     </Compile>
@@ -73,7 +80,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Content\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EmployeeList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ReportList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
