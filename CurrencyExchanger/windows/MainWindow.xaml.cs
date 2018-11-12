@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using CurrencyExchanger.pages;
+using CurrencyExchanger.Windows;
 using DMSkin.WPF.Small;
 
 namespace CurrencyExchanger
@@ -52,9 +53,8 @@ namespace CurrencyExchanger
 
         private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var workWindow = new WorkWindow();
+            var workWindow = new EmployeeWindow();
             this.Close();
-            //workWindow.ContentSource = new Uri("/pages/AdministratorPage.xaml");
             workWindow.Show();
         }
     }

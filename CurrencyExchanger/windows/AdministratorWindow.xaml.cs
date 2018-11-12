@@ -19,9 +19,9 @@ namespace CurrencyExchanger
     /// <summary>
     /// Interaction logic for WorkWindow.xaml
     /// </summary>
-    public partial class WorkWindow : ModernWindow
+    public partial class AdministratorWindow : ModernWindow
     {
-        public WorkWindow()
+        public AdministratorWindow()
         {
             InitializeComponent();
         }
