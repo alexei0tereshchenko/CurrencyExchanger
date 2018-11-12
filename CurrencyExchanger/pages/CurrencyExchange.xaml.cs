@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Xml.Linq;
-using FirstFloor.ModernUI.Windows.Controls;
 
-namespace CurrencyExchanger.pages
+namespace CurrencyExchanger.Pages
 {
     /// <summary>
-    /// Interaction logic for EmployeeList.xaml
+    /// Interaction logic for CurrencyExchange.xaml
     /// </summary>
-    public partial class EmployeeList : UserControl
+    public partial class CurrencyExchange : UserControl
     {
-        public EmployeeList()
+        public CurrencyExchange()
         {
             InitializeComponent();
-
         }
     }
 }

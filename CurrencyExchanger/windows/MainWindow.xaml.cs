@@ -53,7 +53,7 @@ namespace CurrencyExchanger
 
         private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var workWindow = new EmployeeWindow();
+            var workWindow = new AdministratorWindow();
             this.Close();
             workWindow.Show();
         }

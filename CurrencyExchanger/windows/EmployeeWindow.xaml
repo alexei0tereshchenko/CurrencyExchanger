@@ -11,7 +11,7 @@
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="Employee controls">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Currency exchange" Source="/Pages/EmployeeList.xaml"/>
+                <mui:Link DisplayName="Currency exchange" Source="/Pages/CurrencyExchange.xaml"/>
                 <mui:Link DisplayName="Exchange rates" Source="/Pages/ExchangeRate.xaml"/>
             </mui:LinkGroup.Links>
         </mui:LinkGroup>

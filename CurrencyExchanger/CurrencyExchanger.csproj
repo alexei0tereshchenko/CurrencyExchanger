@@ -47,6 +47,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -59,6 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Content\CurrencyExchange.xaml.cs">
+      <DependentUpon>CurrencyExchange.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Content\Employee.xaml.cs">
       <DependentUpon>Employee.xaml</DependentUpon>
     </Compile>
@@ -66,6 +70,9 @@
       <DependentUpon>Report.xaml</DependentUpon>
     </Compile>
     <Compile Include="EmployeeLoader.cs" />
+    <Compile Include="Pages\CurrencyExchange.xaml.cs">
+      <DependentUpon>CurrencyExchange.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EmployeeList.xaml.cs">
       <DependentUpon>EmployeeList.xaml</DependentUpon>
     </Compile>
@@ -79,11 +86,19 @@
     <Compile Include="Windows\AdministratorWindow.xaml.cs">
       <DependentUpon>AdministratorWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Content\CurrencyExchange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Content\Employee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Content\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CurrencyExchange.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
