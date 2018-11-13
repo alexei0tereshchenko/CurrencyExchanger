@@ -59,8 +59,8 @@
                             <TextBox x:Name="ExchangingCurrency" Width="150" />
                         </StackPanel>
                     <StackPanel>
-                        <Label Width="130" Content="Ammount" Target="{Binding ElementName=Ammount}"/>
-                        <TextBox x:Name="Ammount" Width="150"/>
+                        <Label Width="130" Content="Amount" Target="{Binding ElementName=Amount}"/>
+                        <TextBox x:Name="Amount" Width="150"/>
                     </StackPanel>
                     <StackPanel >
                         <Label />

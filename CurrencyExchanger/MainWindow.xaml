@@ -31,7 +31,7 @@
         <Border>
             <Grid>
                 <Border>
-                    <Image gif:ImageBehavior.AnimatedSource="/Images/back.gif" Stretch="Fill" />
+                    <Image gif:ImageBehavior.AnimatedSource="/packages/view/Images/back.gif" Stretch="Fill" />
                 </Border>
                 <Border Background="#00FFFFFF" />
             </Grid>

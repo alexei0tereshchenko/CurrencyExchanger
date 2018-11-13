@@ -35,10 +35,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DMSkin.WPF.Small, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>https://github.com/944095635/DMSkin-QQSignIN/blob/master/packages/DMSkin.WPF.Small.1.0.0/lib/net40/DMSkin.WPF.Small.dll</HintPath>
+      <HintPath>packages\lib\DMSkin.WPF.Small.dll</HintPath>
     </Reference>
     <Reference Include="FirstFloor.ModernUI">
       <HintPath>..\..\example\mui\1.0\FirstFloor.ModernUI\FirstFloor.ModernUI\bin\Debug\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="FirstFloor.ModernUI, Version=1.0.9.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>packages\lib\FirstFloor.ModernUI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,89 +55,74 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WpfAnimatedGif, Version=1.4.15.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>https://github.com/944095635/DMSkin-QQSignIN/blob/master/packages/WpfAnimatedGif.1.4.15/lib/net/WpfAnimatedGif.dll</HintPath>
+      <HintPath>packages\lib\WpfAnimatedGif.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="Content\CurrencyExchange.xaml.cs">
-      <DependentUpon>CurrencyExchange.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Content\Employee.xaml.cs">
-      <DependentUpon>Employee.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Content\Report.xaml.cs">
-      <DependentUpon>Report.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeLoader.cs" />
-    <Compile Include="Pages\CurrencyExchange.xaml.cs">
-      <DependentUpon>CurrencyExchange.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\EmployeeList.xaml.cs">
-      <DependentUpon>EmployeeList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ExchangeRate.xaml.cs">
-      <DependentUpon>ExchangeRate.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ReportList.xaml.cs">
-      <DependentUpon>ReportList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ReportLoader.cs" />
-    <Compile Include="Windows\AdministratorWindow.xaml.cs">
-      <DependentUpon>AdministratorWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Content\CurrencyExchange.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Content\Employee.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Content\Report.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\CurrencyExchange.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\EmployeeList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\ExchangeRate.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\ReportList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\EmployeeWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Windows\EmployeeWindow.xaml.cs">
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Content\CurrencyExchange.xaml.cs">
+      <DependentUpon>CurrencyExchange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Content\Employee.xaml.cs">
+      <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Content\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Loaders\EmployeeLoader.cs" />
+    <Compile Include="packages\view\Loaders\ReportLoader.cs" />
+    <Compile Include="packages\view\Pages\CurrencyExchange.xaml.cs">
+      <DependentUpon>CurrencyExchange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Pages\EmployeeList.xaml.cs">
+      <DependentUpon>EmployeeList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Pages\ExchangeRate.xaml.cs">
+      <DependentUpon>ExchangeRate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Pages\ReportList.xaml.cs">
+      <DependentUpon>ReportList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Windows\AdministratorWindow.xaml.cs">
+      <DependentUpon>AdministratorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Windows\EmployeeWindow.xaml.cs">
       <DependentUpon>EmployeeWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Windows\AdministratorWindow.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Content\CurrencyExchange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Content\Employee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Content\Report.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Pages\CurrencyExchange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Pages\EmployeeList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Pages\ExchangeRate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Pages\ReportList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Windows\AdministratorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Windows\EmployeeWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -153,14 +141,29 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\back.gif" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="packages\lib\DMSkin.WPF.Small.dll" />
+    <Content Include="packages\lib\FirstFloor.ModernUI.dll" />
+    <Content Include="packages\lib\WpfAnimatedGif.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="packages\bo\" />
+    <Folder Include="packages\lib\" />
+    <Folder Include="packages\model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="packages\view\Images\back.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,7 +13,7 @@
             <TextBlock DockPanel.Dock="Top" Text="Exchange Rate" Style="{StaticResource Heading2}" Margin="0,0,0,8" />
             <DataGrid Name="DG1" ItemsSource="{Binding}" AutoGenerateColumns="False" >
                 <DataGrid.Columns>
-                    <mui:DataGridTextColumn Header="Name"  Binding="{Binding Name}"/>
+                    <mui:DataGridTextColumn Header="CurrencyName"  Binding="{Binding CurrencyName}"/>
                     <mui:DataGridTextColumn Header="Purchase" Binding="{Binding Purchase}" />
                     <mui:DataGridTextColumn Header="Selling" Binding="{Binding Selling}" />
                 </DataGrid.Columns>

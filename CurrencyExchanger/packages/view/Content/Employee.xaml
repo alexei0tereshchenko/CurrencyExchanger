@@ -43,8 +43,8 @@
                         <TextBox x:Name="TextLastName" Width="150" Text="{Binding LastName, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
                     </StackPanel>
                     <StackPanel>
-                        <Label Content="Gender" Target="{Binding ElementName=RadioGendeMale}"/>
-                        <RadioButton x:Name="RadioGendeMale">
+                        <Label Content="Gender" Target="{Binding ElementName=RadioGender}"/>
+                        <RadioButton x:Name="RadioGender">
                             <TextBlock>Male</TextBlock>
                         </RadioButton>
                         <RadioButton Content="Female" Margin="8,0,0,0" />
