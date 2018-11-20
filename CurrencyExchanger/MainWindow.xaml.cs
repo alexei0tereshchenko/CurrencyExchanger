@@ -20,7 +20,8 @@ namespace CurrencyExchanger
 
         private void LoginBox_LostKeyboardFocus(object sender, System.Windows.Input.KeyboardFocusChangedEventArgs e)
         {
-            if (LoginBox.Text.Equals("")){
+            if (LoginBox.Text.Equals(""))
+            {
                 LoginBox.Text = "Username";
                 LoginBox.Foreground = Brushes.DarkGray;
             }
@@ -28,7 +29,8 @@ namespace CurrencyExchanger
 
         private void LoginBox_GotKeyboardFocus(object sender, System.Windows.Input.KeyboardFocusChangedEventArgs e)
         {
-            if (LoginBox.Text.Equals("Username")){
+            if (LoginBox.Text.Equals("Username"))
+            {
                 LoginBox.Text = "";
                 LoginBox.Foreground = Brushes.Black;
             }
@@ -36,16 +38,17 @@ namespace CurrencyExchanger
 
         private void PasswordBox_GotKeyboardFocus(object sender, System.Windows.Input.KeyboardFocusChangedEventArgs e)
         {
-            if (PasswordBox.Password.Equals("Password")) {         
+            if (PasswordBox.Password.Equals("Password"))
+            {
                 PasswordBox.Password = "";
                 PasswordBox.Foreground = Brushes.Black;
             }
-
         }
 
         private void PasswordBox_LostKeyboardFocus(object sender, System.Windows.Input.KeyboardFocusChangedEventArgs e)
         {
-            if (PasswordBox.Password.Equals("")){         
+            if (PasswordBox.Password.Equals(""))
+            {
                 PasswordBox.Password = "Password";
                 PasswordBox.Foreground = Brushes.DarkGray;
             }

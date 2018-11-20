@@ -43,6 +43,9 @@
     <Reference Include="FirstFloor.ModernUI, Version=1.0.9.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>packages\lib\FirstFloor.ModernUI.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <HintPath>packages\lib\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -66,6 +69,12 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="packages\dao\DBMySQLUtils.cs" />
+    <Compile Include="packages\dao\DBUtils.cs" />
+    <Compile Include="packages\model\Currency.cs" />
+    <Compile Include="packages\model\Person.cs" />
+    <Compile Include="packages\model\Report.cs" />
+    <Compile Include="packages\model\User.cs" />
     <Compile Include="packages\view\Content\CurrencyExchange.xaml.cs">
       <DependentUpon>CurrencyExchange.xaml</DependentUpon>
     </Compile>
