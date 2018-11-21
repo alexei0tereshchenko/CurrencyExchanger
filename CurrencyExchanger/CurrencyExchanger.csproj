@@ -69,6 +69,11 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="packages\bo\abstract\AbstractBO.cs" />
+    <Compile Include="packages\bo\abstract\AbstractCreateBO.cs" />
+    <Compile Include="packages\bo\abstract\AbstractDeleteBO.cs" />
+    <Compile Include="packages\bo\abstract\AbstractReadBO.cs" />
+    <Compile Include="packages\bo\abstract\AbstractUpdateBO.cs" />
     <Compile Include="packages\dao\DBMySQLUtils.cs" />
     <Compile Include="packages\dao\DBUtils.cs" />
     <Compile Include="packages\model\Currency.cs" />
