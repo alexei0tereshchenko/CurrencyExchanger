@@ -1,12 +1,45 @@
+using System;
+using System.Collections.Generic;
 using CurrencyExchanger.packages.bo.@abstract;
+using CurrencyExchanger.packages.Models;
 
 namespace CurrencyExchanger.packages.bo.customer
 {
-    public class CreateCustomerBO:AbstractCreateBO
+    public class CreateCustomerBO : AbstractCreateBO
     {
-        public override void DoCreate(object[] parameters)
+        public override void DoCreate(Dictionary<string, object> parameters)
         {
-            throw new System.NotImplementedException();
+            var person = new Person();
+            foreach (var row in parameters)
+            {
+                if (row.Key.Equals("FirstName"))
+                {
+                    person.FirstName = row.Value.ToString();
+                }
+
+                if (row.Key.Equals("LastName"))
+                {
+                    person.FirstName = row.Value.ToString();
+                }
+
+                if (row.Key.Equals("BirthDate"))
+                {
+                    person.BirthDate = (DateTime?) row.Value;
+                }
+
+                if (row.Key.Equals("PassportSeries"))
+                {
+                    person.PassportSeries = row.Value.ToString();
+                }
+
+                if (row.Key.Equals("PassportId"))
+                {
+                    person.PassportId = row.Value.ToString();
+                }
+            }
+
+            GetCurrencyexchangerContext().Person.Add(person);
+            GetCurrencyexchangerContext().SaveChangesAsync();
         }
     }
 }

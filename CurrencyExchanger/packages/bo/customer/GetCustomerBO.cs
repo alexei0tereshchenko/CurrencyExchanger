@@ -1,3 +1,4 @@
+using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.Models;
 
@@ -5,9 +6,9 @@ namespace CurrencyExchanger.packages.bo.customer
 {
     public class GetCustomerBO: AbstractReadBO
     {
-        public override Report[] DoRead()
+        public override Model[] DoRead()
         {
-            throw new System.NotImplementedException();
+            return GetCurrencyexchangerContext().Person.ToArray();
         }
     }
 }

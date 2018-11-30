@@ -1,4 +1,6 @@
+using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
+using CurrencyExchanger.packages.Models;
 
 namespace CurrencyExchanger.packages.bo.currency
 {
@@ -6,7 +8,8 @@ namespace CurrencyExchanger.packages.bo.currency
     {
         public override void Delete(int currencyId)
         {
-            throw new System.NotImplementedException();
+            GetCurrencyexchangerContext().Currency.Remove(new Currency{CurrencyId = currencyId});
+            GetCurrencyexchangerContext().SaveChangesAsync();
         }
     }
 }

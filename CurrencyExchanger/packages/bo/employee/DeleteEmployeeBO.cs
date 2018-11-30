@@ -1,4 +1,5 @@
 using CurrencyExchanger.packages.bo.@abstract;
+using CurrencyExchanger.packages.Models;
 
 namespace CurrencyExchanger.packages.bo.employee
 {
@@ -6,7 +7,8 @@ namespace CurrencyExchanger.packages.bo.employee
     {
         public override void Delete(int userId)
         {
-            throw new System.NotImplementedException();
+            GetCurrencyexchangerContext().User.Remove(new User {UserId = userId});
+            GetCurrencyexchangerContext().SaveChangesAsync();
         }
     }
 }

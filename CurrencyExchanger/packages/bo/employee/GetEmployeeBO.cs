@@ -6,9 +6,9 @@ namespace CurrencyExchanger.packages.bo.employee
 {
     public class GetEmployeeBO:AbstractReadBO
     {
-        public override Report[] DoRead()
+        public override Model[] DoRead()
         {
-            throw new System.NotImplementedException();
+            return GetCurrencyexchangerContext().User.ToArray();
         }
 
         public static User GetUserByLogin(string login, string password)
