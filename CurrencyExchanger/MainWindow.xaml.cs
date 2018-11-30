@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using CurrencyExchanger.packages.bo;
 using CurrencyExchanger.pages;
 using CurrencyExchanger.Windows;
 using DMSkin.WPF.Small;
@@ -56,9 +57,18 @@ namespace CurrencyExchanger
 
         private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var workWindow = new EmployeeWindow();
-            this.Close();
-            workWindow.Show();
+            if (!SessionService.GetInstance().Authorizate(LoginBox.Text, PasswordBox.Password))
+            {
+                TextBox.Text = "Wrong username or password.";
+                TextBox.Foreground = Brushes.Red;
+            }
+            else
+            {
+                Close();
+            }
+            {
+                
+            }
         }
     }
 }

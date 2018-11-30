@@ -1,15 +1,12 @@
-using CurrencyExchanger.packages.dao;
-using MySql.Data.MySqlClient;
+using CurrencyExchanger.packages.Models;
 
 namespace CurrencyExchanger.packages.bo.@abstract
 {
     public abstract class AbstractBO
     {
-        private static readonly MySqlConnection Connection = DBUtils.GetInstance().Connection;
-
-        public MySqlConnection GetConnection()
+        public static CurrencyexchangerContext GetCurrencyexchangerContext()
         {
-            return Connection;
+            return SessionService.GetInstance().DbContext;
         }
     }
 }

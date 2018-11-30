@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchanger", "CurrencyExchanger\CurrencyExchanger.csproj", "{F16D571F-692F-4E4D-BD03-B9F0DA7758F3}"
 EndProject
 Global
@@ -12,5 +15,11 @@ Global
 		{F16D571F-692F-4E4D-BD03-B9F0DA7758F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F16D571F-692F-4E4D-BD03-B9F0DA7758F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F16D571F-692F-4E4D-BD03-B9F0DA7758F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65E4FB87-1C05-49DD-919D-464CF26105F5}
 	EndGlobalSection
 EndGlobal

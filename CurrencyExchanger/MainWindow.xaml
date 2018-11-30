@@ -36,7 +36,7 @@
                 <Border Background="#00FFFFFF" />
             </Grid>
         </Border>
-        <TextBlock HorizontalAlignment="Left" Text="Please, enter your credentials" TextAlignment="Center"
+        <TextBlock Name="TextBox" HorizontalAlignment="Left" Text="Please, enter your credentials" TextAlignment="Center"
                    Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="412"
                    FontSize="16" FontWeight="Bold" Foreground="#FF44617E" />
         <TextBox Name="LoginBox" HorizontalAlignment="Left" Height="23" Margin="156,38,0,0" Grid.Row="1"
