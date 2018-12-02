@@ -9,16 +9,16 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
         <!-- TODO: set @SelectedSource -->
-        <mui:ModernTab Layout="List">
-            <mui:ModernTab.Links>
-                <!-- TODO: set @Source -->
-                <mui:Link DisplayName="Paul Mason" Source="/1"/>
-                <mui:Link DisplayName="Sarah Miller" Source="/2"/>
-                <mui:Link DisplayName="John Porter" Source="/3"/>
+        <mui:ModernTab Layout="List" Name="Employees">
+           
+           <!--<mui:ModernTab.Links>
+                <mui:Link DisplayName="Paul Mason" Source="/1" />
+                <mui:Link DisplayName="Sarah Miller" Source="/2" />
+                <mui:Link DisplayName="John Porter" Source="/3" />
             </mui:ModernTab.Links>
-            <mui:ModernTab.ContentLoader>
+           <mui:ModernTab.ContentLoader>
                 <app:EmployeeLoader/>
-            </mui:ModernTab.ContentLoader>
+            </mui:ModernTab.ContentLoader>-->
         </mui:ModernTab>
         <WrapPanel x:Name="ButtonPanel" Height="45" Width="126" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40,0,0,0" >
             <mui:ModernButton HorizontalAlignment="Center" VerticalAlignment="Center" IconData="F1 M 35,19L 41,19L 41,35L 57,35L 57,41L 41,41L 41,57L 35,57L 35,41L 19,41L 19,35L 35,35L 35,19 Z " Width="38" Height="38" Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0"/>

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.Models;
+using CurrencyExchanger.packages.model;
 
 namespace CurrencyExchanger.packages.bo.report
 {

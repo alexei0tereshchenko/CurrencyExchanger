@@ -23,6 +23,7 @@ namespace CurrencyExchanger.Content
         public Employee()
         {
             InitializeComponent();
+            
         }
     }
 }

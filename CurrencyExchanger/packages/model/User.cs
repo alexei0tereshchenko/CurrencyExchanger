@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CurrencyExchanger.packages.Models
+namespace CurrencyExchanger.packages.model
 {
     public partial class User:Model
     {

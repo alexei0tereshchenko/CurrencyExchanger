@@ -1,16 +1,16 @@
 using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.Models;
+using CurrencyExchanger.packages.model;
 
 namespace CurrencyExchanger.packages.bo.employee
 {
     public class GetEmployeeBO:AbstractReadBO
     {
-        public override Model[] DoRead()
+        public static User[] DoRead()
         {
             return GetCurrencyexchangerContext().User.ToArray();
         }
-
+        
         public static User GetUserByLogin(string login, string password)
         {
             var user = GetCurrencyexchangerContext().User.FirstOrDefault(u => u.Login.Equals(login));

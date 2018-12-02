@@ -155,12 +155,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="packages\bo\SessionService.cs" />
-    <Compile Include="packages\Models\Currency.cs" />
-    <Compile Include="packages\Models\currencyexchangerContext.cs" />
-    <Compile Include="packages\Models\Model.cs" />
-    <Compile Include="packages\Models\Person.cs" />
-    <Compile Include="packages\Models\Report.cs" />
-    <Compile Include="packages\Models\User.cs" />
+    <Compile Include="packages\model\Currency.cs" />
+    <Compile Include="packages\model\currencyexchangerContext.cs" />
+    <Compile Include="packages\model\Model.cs" />
+    <Compile Include="packages\model\Person.cs" />
+    <Compile Include="packages\model\Report.cs" />
+    <Compile Include="packages\model\User.cs" />
     <Compile Include="packages\bo\abstract\AbstractBO.cs" />
     <Compile Include="packages\bo\abstract\AbstractCreateBO.cs" />
     <Compile Include="packages\bo\abstract\AbstractDeleteBO.cs" />

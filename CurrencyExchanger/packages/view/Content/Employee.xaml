@@ -9,14 +9,8 @@
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
             <StackPanel MinWidth="200">
-                <TextBlock Text="NAME SURNAME" Style="{StaticResource Heading2}" />
+                <TextBlock Name="NameSurname" Text="NAME SURNAME" Style="{StaticResource Heading2}" />
                 <StackPanel x:Name="Form" Orientation="Vertical">
-
-                    <!-- create viewmodel -->
-                    <!--<StackPanel.DataContext>
-                        <app:SampleFormViewModel />
-                    </StackPanel.DataContext> -->
-
                     <StackPanel.Resources>
                         <Style TargetType="StackPanel">
                             <Setter Property="Orientation" Value="Horizontal" />
@@ -36,18 +30,16 @@
 
                     <StackPanel>
                         <Label Content="First name" Target="{Binding ElementName=TextFirstName}"/>
-                        <TextBox x:Name="TextFirstName" Width="150" Text="{Binding FirstName, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                        <TextBox x:Name="TextFirstName" Width="150"/>
                     </StackPanel>
                     <StackPanel>
                         <Label Content="Last name" Target="{Binding ElementName=TextLastName}"/>
-                        <TextBox x:Name="TextLastName" Width="150" Text="{Binding LastName, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
+                        <TextBox x:Name="TextLastName" Width="150"/>
                     </StackPanel>
                     <StackPanel>
-                        <Label Content="Gender" Target="{Binding ElementName=RadioGender}"/>
-                        <RadioButton x:Name="RadioGender">
-                            <TextBlock>Male</TextBlock>
-                        </RadioButton>
-                        <RadioButton Content="Female" Margin="8,0,0,0" />
+                        <Label Content="Gender" />
+                        <RadioButton Content="Male" Name="RadioMale"/>  
+                        <RadioButton Content="Female" Name="RadioFemale" Margin="8,0,0,0" />
                     </StackPanel>
                     <StackPanel>
                         <Label Content="Birth date" Target="{Binding ElementName=DateBirth}" />
@@ -124,13 +116,6 @@
                         <Label Content="Zip code" Target="{Binding ElementName=TextZipCode}"/>
                         <TextBox x:Name="TextZipCode" Width="150" />
                     </StackPanel>
-                    <StackPanel >
-                        <Label />
-                        <CheckBox>
-                            <TextBlock FontWeight="Bold">I agree to the terms of use</TextBlock>
-                        </CheckBox>
-                    </StackPanel>
-
                     <Button Content="Submit" Margin="100,16,0,0" HorizontalAlignment="Left" />
                 </StackPanel>
             </StackPanel>

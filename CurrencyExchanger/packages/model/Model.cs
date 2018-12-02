@@ -1,4 +1,4 @@
-namespace CurrencyExchanger.packages.Models
+namespace CurrencyExchanger.packages.model
 {
     public interface Model
     {

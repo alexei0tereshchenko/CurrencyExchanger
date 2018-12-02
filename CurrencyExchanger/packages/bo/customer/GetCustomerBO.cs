@@ -1,12 +1,12 @@
 using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.Models;
+using CurrencyExchanger.packages.model;
 
 namespace CurrencyExchanger.packages.bo.customer
 {
     public class GetCustomerBO: AbstractReadBO
     {
-        public override Model[] DoRead()
+        public static Person[] DoRead()
         {
             return GetCurrencyexchangerContext().Person.ToArray();
         }

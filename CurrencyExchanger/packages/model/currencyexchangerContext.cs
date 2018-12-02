@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-namespace CurrencyExchanger.packages.Models
+namespace CurrencyExchanger.packages.model
 {
     public partial class CurrencyexchangerContext : DbContext
     {
