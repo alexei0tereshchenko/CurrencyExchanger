@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="CurrencyExchanger.Content.Employee"
+﻿<UserControl x:Class="CurrencyExchanger.packages.view.Content.Employee"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -116,7 +116,7 @@
                         <Label Content="Zip code" Target="{Binding ElementName=TextZipCode}"/>
                         <TextBox x:Name="TextZipCode" Width="150" />
                     </StackPanel>
-                    <Button Content="Submit" Margin="100,16,0,0" HorizontalAlignment="Left" />
+                    <Button Content="Submit" Margin="100,16,0,0" HorizontalAlignment="Left" Click="ButtonBase_OnClick"/>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

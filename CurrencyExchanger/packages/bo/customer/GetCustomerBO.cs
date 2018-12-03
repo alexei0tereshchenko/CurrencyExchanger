@@ -6,7 +6,7 @@ namespace CurrencyExchanger.packages.bo.customer
 {
     public class GetCustomerBO: AbstractReadBO
     {
-        public static Person[] DoRead()
+        public override Model[] DoRead()
         {
             return GetCurrencyexchangerContext().Person.ToArray();
         }

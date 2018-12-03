@@ -71,5 +71,11 @@ namespace CurrencyExchanger.packages.bo.employee
             GetCurrencyexchangerContext().User.Update(user);
             GetCurrencyexchangerContext().SaveChanges();
         }
+
+        public static void UpdateUser(User user)
+        {
+            GetCurrencyexchangerContext().User.Update(user);
+            GetCurrencyexchangerContext().SaveChanges();
+        }
     }
 }

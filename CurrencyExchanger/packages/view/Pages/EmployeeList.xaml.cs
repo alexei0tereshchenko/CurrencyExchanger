@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using CurrencyExchanger.packages.bo.employee;
+using CurrencyExchanger.packages.model;
 using FirstFloor.ModernUI.Presentation;
 using CurrencyExchanger.packages.view.Dialogs;
 
@@ -22,9 +23,9 @@ namespace CurrencyExchanger.pages
 
         public void ReloadUsers()
         {
-            var allEmployees = GetEmployeeBO.DoRead();
+            var allEmployees = GetEmployeeBO.GetInstance().DoRead();
             var employeeLinks = new LinkCollection();
-            foreach (var employee in allEmployees)
+            foreach (var employee in (User[])allEmployees)
             {
                 if (employee.UserId != 1)
                 {
@@ -37,7 +38,7 @@ namespace CurrencyExchanger.pages
             }
 
             Employees.Links = employeeLinks;
-            Employees.ContentLoader = new EmployeeLoader();
+            Employees.ContentLoader = new EmployeeLoader {EmployeeList = this};
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

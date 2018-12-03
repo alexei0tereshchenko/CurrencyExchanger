@@ -6,7 +6,18 @@ namespace CurrencyExchanger.packages.bo.employee
 {
     public class GetEmployeeBO:AbstractReadBO
     {
-        public static User[] DoRead()
+        private static GetEmployeeBO _instance;
+
+        private GetEmployeeBO()
+        {
+        }
+
+        public static GetEmployeeBO GetInstance()
+        {
+            return _instance ?? (_instance = new GetEmployeeBO());
+        }
+
+        public override Model[] DoRead()
         {
             return GetCurrencyexchangerContext().User.ToArray();
         }

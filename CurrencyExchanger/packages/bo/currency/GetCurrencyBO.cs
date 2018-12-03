@@ -6,7 +6,7 @@ namespace CurrencyExchanger.packages.bo.currency
 {
     public class GetCurrencyBO:AbstractReadBO
     {
-        public Currency[] DoRead()
+        public override Model[] DoRead()
         {
             return GetCurrencyexchangerContext().Currency.ToArray();
         }     

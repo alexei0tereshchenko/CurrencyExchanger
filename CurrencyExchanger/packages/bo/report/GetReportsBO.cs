@@ -6,7 +6,7 @@ namespace CurrencyExchanger.packages.bo.report
 {
     public class GetReportsBO:AbstractReadBO
     {
-        public static Report[] DoRead()
+        public override Model[] DoRead()
         {
             return GetCurrencyexchangerContext().Report.ToArray();
         }

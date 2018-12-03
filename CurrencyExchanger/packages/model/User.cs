@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CurrencyExchanger.packages.model
 {
-    public partial class User
+    public partial class User:Model
     {
         public User()
         {
