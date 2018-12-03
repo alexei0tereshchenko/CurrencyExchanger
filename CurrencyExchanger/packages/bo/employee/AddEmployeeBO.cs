@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.model;
 
 namespace CurrencyExchanger.packages.bo.employee
 {
-    public class AddEmployeeBO: AbstractCreateBO
+    public class AddEmployeeBO : AbstractCreateBO
     {
         public override void DoCreate(Dictionary<string, object> parameters)
         {
@@ -69,7 +70,22 @@ namespace CurrencyExchanger.packages.bo.employee
             }
 
             GetCurrencyexchangerContext().User.Add(user);
-            GetCurrencyexchangerContext().SaveChangesAsync();
+            GetCurrencyexchangerContext().SaveChanges();
+        }
+
+        public static void CreateUser(User user)
+        {
+            user.UserId = 0;
+            var users = GetCurrencyexchangerContext().User.ToArray();
+            foreach (var u in users)
+            {
+                if (u.UserId >= user.UserId)
+                {
+                    user.UserId = u.UserId + 1;
+                }
+            }
+            GetCurrencyexchangerContext().User.Add(user);
+            GetCurrencyexchangerContext().SaveChanges();
         }
     }
 }

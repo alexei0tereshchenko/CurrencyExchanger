@@ -1,0 +1,145 @@
+﻿<mui:ModernDialog x:Class="CurrencyExchanger.packages.view.Dialogs.AddEmployeeDialog"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                  xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+                  mc:Ignorable="d" 
+                  d:DesignHeight="300" d:DesignWidth="300"
+                  Title="New Employee">
+
+    <ScrollViewer>
+        <StackPanel MinWidth="200">
+            <StackPanel x:Name="Form" Orientation="Vertical">
+                <StackPanel.Resources>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Orientation" Value="Horizontal" />
+                        <Setter Property="Margin" Value="0,0,0,4" />
+                    </Style>
+                    <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                        <Setter Property="Width" Value="100" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                    <Style TargetType="CheckBox" BasedOn="{StaticResource {x:Type CheckBox}}">
+                        <Setter Property="Padding" Value="0,3" />
+                    </Style>
+                    <Style TargetType="RadioButton" BasedOn="{StaticResource {x:Type RadioButton}}">
+                        <Setter Property="Padding" Value="0,3" />
+                    </Style>
+                </StackPanel.Resources>
+
+                <StackPanel>
+                    <Label Content="Login" Width="110" Target="{Binding ElementName=LoginBox}"/>
+                    <TextBox x:Name="LoginBox" Width="150"/>
+                    <TextBlock Name="LoginMessage" Margin="5,0,0,0" Text="*" Foreground="Red" Visibility="Hidden"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Password" Width="110" Target="{Binding ElementName=PasswordBox}"/>
+                    <PasswordBox x:Name="PasswordBox" Width="150"/>
+                    <TextBlock Name="PasswordMessage" Margin="5,0,0,0" Text="*" Foreground="Red" Visibility="Hidden"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Repeat password" Width="110" Target="{Binding ElementName=RepeatPasswordBox}"/>
+                    <PasswordBox x:Name="RepeatPasswordBox" Width="150" LostFocus="RepeatPasswordBox_OnLostFocus"/>
+                    <TextBlock Name="PasswordsDontMatch" Margin="5,0,0,0" Text="*Passwords should match" Foreground="Red" Visibility="Hidden"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="First name" Width="110" Target="{Binding ElementName=TextFirstName}"/>
+                    <TextBox x:Name="TextFirstName" Width="150"/>
+                    <TextBlock Name="FirstNameMessage" Margin="5,0,0,0" Text="*" Foreground="Red" Visibility="Hidden"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Last name" Width="110" Target="{Binding ElementName=TextLastName}"/>
+                    <TextBox x:Name="TextLastName" Width="150"/>
+                    <TextBlock Name="LastNameMessage" Margin="5,0,0,0" Text="*" Foreground="Red" Visibility="Hidden"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Gender" Width="110"/>
+                    <RadioButton Content="Male" Name="RadioMale"/>
+                    <RadioButton Content="Female" Name="RadioFemale" Margin="8,0,0,0" />
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Birth date" Width="110" Target="{Binding ElementName=DateBirth}" />
+                    <DatePicker x:Name="DateBirth" />
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Address" Width="110" Target="{Binding ElementName=TextAddress}"/>
+                    <TextBox x:Name="TextAddress" Width="150" />
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="City" Width="110" Target="{Binding ElementName=TextCity}"/>
+                    <TextBox x:Name="TextCity" Width="150" />
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="State" Width="110" Target="{Binding ElementName=ComboState}"/>
+                    <ComboBox x:Name="ComboState" Width="150">
+                        <ComboBoxItem>Alabama</ComboBoxItem>
+                        <ComboBoxItem>Alaska</ComboBoxItem>
+                        <ComboBoxItem>Arizona</ComboBoxItem>
+                        <ComboBoxItem>Arkansas</ComboBoxItem>
+                        <ComboBoxItem>California</ComboBoxItem>
+                        <ComboBoxItem>Colorado</ComboBoxItem>
+                        <ComboBoxItem>Connecticut</ComboBoxItem>
+                        <ComboBoxItem>Delaware</ComboBoxItem>
+                        <ComboBoxItem>Florida</ComboBoxItem>
+                        <ComboBoxItem>Georgia</ComboBoxItem>
+                        <ComboBoxItem>Hawaii</ComboBoxItem>
+                        <ComboBoxItem>Idaho</ComboBoxItem>
+                        <ComboBoxItem>Illinois</ComboBoxItem>
+                        <ComboBoxItem>Indiana</ComboBoxItem>
+                        <ComboBoxItem>Iowa</ComboBoxItem>
+                        <ComboBoxItem>Kansas</ComboBoxItem>
+                        <ComboBoxItem>Kentucky</ComboBoxItem>
+                        <ComboBoxItem>Louisiana</ComboBoxItem>
+                        <ComboBoxItem>Maine</ComboBoxItem>
+                        <ComboBoxItem>Maryland</ComboBoxItem>
+                        <ComboBoxItem>Massachusetts</ComboBoxItem>
+                        <ComboBoxItem>Michigan</ComboBoxItem>
+                        <ComboBoxItem>Minnesota</ComboBoxItem>
+                        <ComboBoxItem>Mississippi</ComboBoxItem>
+                        <ComboBoxItem>Missouri</ComboBoxItem>
+                        <ComboBoxItem>Montana</ComboBoxItem>
+                        <ComboBoxItem>Nebraska</ComboBoxItem>
+                        <ComboBoxItem>Nevada</ComboBoxItem>
+                        <ComboBoxItem>New Hampshire</ComboBoxItem>
+                        <ComboBoxItem>New Jersey</ComboBoxItem>
+                        <ComboBoxItem>New Mexico</ComboBoxItem>
+                        <ComboBoxItem>New York</ComboBoxItem>
+                        <ComboBoxItem>North Carolina</ComboBoxItem>
+                        <ComboBoxItem>North Dakota</ComboBoxItem>
+                        <ComboBoxItem>Ohio</ComboBoxItem>
+                        <ComboBoxItem>Oklahoma</ComboBoxItem>
+                        <ComboBoxItem>Oregon</ComboBoxItem>
+                        <ComboBoxItem>Pennsylvania</ComboBoxItem>
+                        <ComboBoxItem>Rhode Island</ComboBoxItem>
+                        <ComboBoxItem>South Carolina</ComboBoxItem>
+                        <ComboBoxItem>South Dakota</ComboBoxItem>
+                        <ComboBoxItem>Tennessee</ComboBoxItem>
+                        <ComboBoxItem>Texas</ComboBoxItem>
+                        <ComboBoxItem>Utah</ComboBoxItem>
+                        <ComboBoxItem>Vermont</ComboBoxItem>
+                        <ComboBoxItem>Virginia</ComboBoxItem>
+                        <ComboBoxItem>Washington</ComboBoxItem>
+                        <ComboBoxItem>West Virginia</ComboBoxItem>
+                        <ComboBoxItem>Wisconsin</ComboBoxItem>
+                        <ComboBoxItem>Wyoming</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="E-mail" Width="110" Target="{Binding ElementName=Email}"/>
+                    <TextBox x:Name="Email" Width="150"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Zip code" Width="110" Target="{Binding ElementName=TextZipCode}"/>
+                    <TextBox x:Name="TextZipCode" Width="150" />
+                </StackPanel>
+                <StackPanel Margin="150,70,0,0">
+                    <Button Content="Submit" Margin="100,16,0,0" HorizontalAlignment="Left" Click="Button_Click"/>
+                    <Button Content="Cancel" Margin="5,16,0,0" Click="ButtonBase_OnClick"/>
+                </StackPanel>
+                
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+
+</mui:ModernDialog>

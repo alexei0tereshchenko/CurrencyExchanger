@@ -39,7 +39,7 @@ namespace CurrencyExchanger.packages.bo.customer
             }
 
             GetCurrencyexchangerContext().Person.Add(person);
-            GetCurrencyexchangerContext().SaveChangesAsync();
+            GetCurrencyexchangerContext().SaveChanges();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace CurrencyExchanger.packages.bo.employee
         public override void Delete(int userId)
         {
             GetCurrencyexchangerContext().User.Remove(new User {UserId = userId});
-            GetCurrencyexchangerContext().SaveChangesAsync();
+            GetCurrencyexchangerContext().SaveChanges();
         }
     }
 }

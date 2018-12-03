@@ -9,7 +9,7 @@ namespace CurrencyExchanger.packages.bo.currency
         public override void Delete(int currencyId)
         {
             GetCurrencyexchangerContext().Currency.Remove(new Currency{CurrencyId = currencyId});
-            GetCurrencyexchangerContext().SaveChangesAsync();
+            GetCurrencyexchangerContext().SaveChanges();
         }
     }
 }

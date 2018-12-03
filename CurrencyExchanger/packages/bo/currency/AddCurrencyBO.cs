@@ -19,7 +19,7 @@ namespace CurrencyExchanger.packages.bo.currency
                     currency.Purchase = (double)row.Value;
             }
             GetCurrencyexchangerContext().Currency.Add(currency);
-            GetCurrencyexchangerContext().SaveChangesAsync();
+            GetCurrencyexchangerContext().SaveChanges();
         }
     }
 }

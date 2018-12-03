@@ -20,7 +20,7 @@ namespace CurrencyExchanger.packages.bo.currency
             }
 
             GetCurrencyexchangerContext().Currency.Update(currency);
-            GetCurrencyexchangerContext().SaveChangesAsync();
+            GetCurrencyexchangerContext().SaveChanges();
         }
     }
 }

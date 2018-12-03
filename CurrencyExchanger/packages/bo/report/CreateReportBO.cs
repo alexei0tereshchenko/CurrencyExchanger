@@ -47,7 +47,7 @@ namespace CurrencyExchanger.packages.bo.report
             report.PersonId = report.Person.PersonId;
             report.UserId = report.User.UserId;
             GetCurrencyexchangerContext().Report.Add(report);
-            GetCurrencyexchangerContext().SaveChangesAsync();
+            GetCurrencyexchangerContext().SaveChanges();
         }
     }
 }
