@@ -15,7 +15,7 @@
                 <DataGrid.Columns>
                     <mui:DataGridTextColumn Header="CurrencyName"  Binding="{Binding CurrencyName}"/>
                     <mui:DataGridTextColumn Header="Purchase" Binding="{Binding Purchase}" />
-                    <mui:DataGridTextColumn Header="Selling" Binding="{Binding Selling}" />
+                    <mui:DataGridTextColumn Header="Sell" Binding="{Binding Sell}" />
                 </DataGrid.Columns>
             </DataGrid>
         </DockPanel>
