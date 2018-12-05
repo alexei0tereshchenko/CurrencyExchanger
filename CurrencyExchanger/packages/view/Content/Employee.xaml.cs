@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using CurrencyExchanger.packages.bo.employee;
 using CurrencyExchanger.packages.model;
 using CurrencyExchanger.pages;
+using FirstFloor.ModernUI.Windows.Controls;
 
 namespace CurrencyExchanger.packages.view.Content
 {
@@ -18,7 +19,7 @@ namespace CurrencyExchanger.packages.view.Content
         }
 
         public User User { private get; set; }
-        public EmployeeList EmployeeList { get; set; }
+        public EmployeeList EmployeeList { private get; set; }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
@@ -41,6 +42,17 @@ namespace CurrencyExchanger.packages.view.Content
 
             UpdateEmployeeBO.UpdateUser(User);
             NameSurname.Text = User.FirstName + " " + User.LastName;
+            EmployeeList.ReloadUsers();
+        }
+
+        private void DeleteButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            const MessageBoxButton btn = MessageBoxButton.YesNo;
+            var result = ModernDialog.ShowMessage(
+                "You are going to delete user " + User.FirstName + " " + User.LastName + ".\nAre you sure?",
+                "Delete User", btn);
+            if (result != MessageBoxResult.Yes) return;
+            DeleteEmployeeBO.GetInstance().Delete(User);
             EmployeeList.ReloadUsers();
         }
     }

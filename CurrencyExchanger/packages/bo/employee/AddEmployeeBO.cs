@@ -75,11 +75,11 @@ namespace CurrencyExchanger.packages.bo.employee
 
         public static void CreateUser(User user)
         {
-            user.UserId = 0;
+            user.UserId = 1;
             var users = GetCurrencyexchangerContext().User.ToArray();
             foreach (var u in users)
             {
-                if (u.UserId >= user.UserId)
+                if (u.UserId == user.UserId)
                 {
                     user.UserId = u.UserId + 1;
                 }

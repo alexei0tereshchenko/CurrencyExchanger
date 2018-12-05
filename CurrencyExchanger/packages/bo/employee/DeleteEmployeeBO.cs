@@ -5,9 +5,20 @@ namespace CurrencyExchanger.packages.bo.employee
 {
     public class DeleteEmployeeBO:AbstractDeleteBO
     {
-        public override void Delete(int userId)
+        private static DeleteEmployeeBO _instance;
+
+        private DeleteEmployeeBO()
         {
-            GetCurrencyexchangerContext().User.Remove(new User {UserId = userId});
+        }
+
+        public static DeleteEmployeeBO GetInstance()
+        {
+            return _instance ?? (_instance = new DeleteEmployeeBO());
+        }
+
+        public override void Delete(Model user)
+        {
+            GetCurrencyexchangerContext().User.Remove((User)user);
             GetCurrencyexchangerContext().SaveChanges();
         }
     }
