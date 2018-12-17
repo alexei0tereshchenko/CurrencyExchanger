@@ -13,7 +13,7 @@ namespace CurrencyExchanger.packages.bo.employee
             var user = new User();
             foreach (var row in parameters)
             {
-                if (row.Key.Equals("FirstName"))
+                if (row.Key.Equals("FirstName")) //commit test
                 {
                     user.FirstName = row.Value.ToString();
                 }
