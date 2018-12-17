@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Collections.ObjectModel;
-using System.Windows.Shapes;
 using CurrencyExchanger.packages.bo.currency;
 using CurrencyExchanger.packages.model;
+using CurrencyExchanger.packages.view.Dialogs;
 
-namespace CurrencyExchanger.Pages
+namespace CurrencyExchanger.packages.view.Pages
 {
+    /// <inheritdoc cref="UserControl" />
     /// <summary>
     /// Interaction logic for ExchangeRate.xaml
     /// </summary>
@@ -26,18 +16,33 @@ namespace CurrencyExchanger.Pages
         public ExchangeRate()
         {
             InitializeComponent();
+            _currencies = (Currency[]) GetCurrencyBO.GetInstance().DoRead();
             var currencyDate = GetData();
             DG1.DataContext = currencyDate;
         }
 
+        private static Currency[] _currencies;
         private static ObservableCollection<Currency> GetData()
         {
             var currencyRates = new ObservableCollection<Currency>();
-            foreach (Currency currency in GetCurrencyBO.GetInstance().DoRead())
+            foreach (var model in _currencies)
             {
+                var currency = model;
                 currencyRates.Add(currency);
             }
             return currencyRates;
+        }
+
+        private void EditCurrency_Click(object sender, RoutedEventArgs e)
+        {
+            var editCurrencyDialog = new AddNewOrEditCurrencyDialog {Currencies = _currencies};
+            editCurrencyDialog.Show();            
+        }
+
+        private void DeleteCurrency_OnClick(object sender, RoutedEventArgs e)
+        {
+            var deleteCurrencyDialog = new DeleteCurrencyDialog{Currencies = _currencies};
+            deleteCurrencyDialog.Show();
         }
     }
 }
