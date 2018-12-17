@@ -11,6 +11,7 @@ namespace CurrencyExchanger.packages.bo.employee
         public override void DoCreate(Dictionary<string, object> parameters)
         {
             var user = new User();
+            
             foreach (var row in parameters)
             {
                 if (row.Key.Equals("FirstName")) //commit test
@@ -77,6 +78,7 @@ namespace CurrencyExchanger.packages.bo.employee
         {
             user.UserId = 1;
             var users = GetCurrencyExchangerContext().User.ToArray();
+            
             foreach (var u in users)
             {
                 if (u.UserId == user.UserId)

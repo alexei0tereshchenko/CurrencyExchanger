@@ -10,6 +10,7 @@ namespace CurrencyExchanger.packages.bo.customer
         public override void DoCreate(Dictionary<string, object> parameters)
         {
             var person = new Person();
+            
             foreach (var row in parameters)
             {
                 if (row.Key.Equals("FirstName"))

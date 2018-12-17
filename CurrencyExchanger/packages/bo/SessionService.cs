@@ -15,9 +15,15 @@ namespace CurrencyExchanger.packages.bo
         public static SessionService GetInstance()
         {
             if (_instance == null)
+            {
                 _instance = new SessionService();
+            }
+
             if (_instance.DbContext == null)
+            {
                 _instance.DbContext = new CurrencyExchangerContext();
+            }
+
             return _instance;
         }
 
@@ -28,7 +34,10 @@ namespace CurrencyExchanger.packages.bo
         public bool Authorizate(string login, string password)
         {
             var user = GetEmployeeBO.GetUserByLogin(login, password);
-            if (user == null) return false;
+            if (user == null)
+            {
+                return false;
+            }
             User = user;
             if (User.Login.Equals("ADMIN"))
             {
