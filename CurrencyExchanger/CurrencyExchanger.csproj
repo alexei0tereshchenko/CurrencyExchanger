@@ -157,7 +157,7 @@
     <Compile Include="packages\bo\SessionService.cs" />
     <Compile Include="packages\model\Currency.cs" />
     <Compile Include="packages\model\CurrencyExchangerContext.cs" />
-    <Compile Include="packages\model\Model.cs" />
+    <Compile Include="packages\model\IModel.cs" />
     <Compile Include="packages\model\Person.cs" />
     <Compile Include="packages\model\Report.cs" />
     <Compile Include="packages\model\User.cs" />

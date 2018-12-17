@@ -17,11 +17,11 @@ namespace CurrencyExchanger.packages.bo
             if (_instance == null)
                 _instance = new SessionService();
             if (_instance.DbContext == null)
-                _instance.DbContext = new CurrencyexchangerContext();
+                _instance.DbContext = new CurrencyExchangerContext();
             return _instance;
         }
 
-        public CurrencyexchangerContext DbContext { get; private set; }
+        public CurrencyExchangerContext DbContext { get; private set; }
 
         public  User User { get; private set; }
 
