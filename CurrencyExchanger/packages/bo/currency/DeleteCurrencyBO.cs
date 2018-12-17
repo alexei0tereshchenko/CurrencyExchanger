@@ -1,4 +1,3 @@
-using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.model;
 

@@ -1,9 +1,7 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 namespace CurrencyExchanger.packages.model
 {
-    public partial class CurrencyexchangerContext : DbContext
+    public sealed  class CurrencyexchangerContext : DbContext
     {
         public CurrencyexchangerContext()
         {
@@ -14,16 +12,15 @@ namespace CurrencyExchanger.packages.model
         {
         }
 
-        public virtual DbSet<Currency> Currency { get; set; }
-        public virtual DbSet<Person> Person { get; set; }
-        public virtual DbSet<Report> Report { get; set; }
-        public virtual DbSet<User> User { get; set; }
+        public DbSet<Currency> Currency { get; set; }
+        public DbSet<Person> Person { get; set; }
+        public DbSet<Report> Report { get; set; }
+        public DbSet<User> User { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=tcp:currencyexchanger.database.windows.net,1433;Initial Catalog=currencyexchanger;Persist Security Info=False;User ID=alexei0tereshchenko;Password=Lyosha_19;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }

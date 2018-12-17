@@ -156,7 +156,7 @@
     </Compile>
     <Compile Include="packages\bo\SessionService.cs" />
     <Compile Include="packages\model\Currency.cs" />
-    <Compile Include="packages\model\currencyexchangerContext.cs" />
+    <Compile Include="packages\model\CurrencyExchangerContext.cs" />
     <Compile Include="packages\model\Model.cs" />
     <Compile Include="packages\model\Person.cs" />
     <Compile Include="packages\model\Report.cs" />
@@ -191,6 +191,12 @@
     <Compile Include="packages\view\Dialogs\AddEpmloyeeDialog.xaml.cs">
       <DependentUpon>AddEpmloyeeDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="packages\view\Dialogs\AddNewOrEditCurrencyDialog.xaml.cs">
+      <DependentUpon>AddNewOrEditCurrencyDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="packages\view\Dialogs\DeleteCurrencyDialog.xaml.cs">
+      <DependentUpon>DeleteCurrencyDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="packages\view\Loaders\EmployeeLoader.cs" />
     <Compile Include="packages\view\Loaders\ReportLoader.cs" />
     <Compile Include="packages\view\Pages\CurrencyExchange.xaml.cs">
@@ -224,6 +230,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="packages\view\Dialogs\AddEpmloyeeDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Dialogs\AddNewOrEditCurrencyDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="packages\view\Dialogs\DeleteCurrencyDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

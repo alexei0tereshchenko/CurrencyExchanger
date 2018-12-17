@@ -13,27 +13,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger
+namespace CurrencyExchanger.packages.view.Dialogs
 {
+    /// <inheritdoc cref="ModernDialog" />
     /// <summary>
-    /// Interaction logic for WorkWindow.xaml
+    /// Interaction logic for EditCurrencyDialog.xaml
     /// </summary>
-    public partial class AdministratorWindow : ModernWindow
+    public partial class DeleteCurrencyDialog : ModernDialog
     {
-        public AdministratorWindow()
+        public Currency[] Currencies { get; set; }
+        public DeleteCurrencyDialog()
         {
             InitializeComponent();
+            CloseButton.Visibility = Visibility.Hidden;
         }
 
-        private void ModernButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
-        private void Link_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
     }
 }
