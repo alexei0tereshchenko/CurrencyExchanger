@@ -19,7 +19,7 @@ namespace CurrencyExchanger.packages.bo.currency
 
         public override IModel[] DoRead()
         {
-            return GetCurrencyexchangerContext().Currency.ToArray();
+            return GetCurrencyExchangerContext().Currency.ToArray();
         }     
     }
 }

@@ -18,8 +18,8 @@ namespace CurrencyExchanger.packages.bo.currency
                 if (row.Key.Equals("Purchase"))
                     currency.Purchase = (double)row.Value;
             }
-            GetCurrencyexchangerContext().Currency.Add(currency);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().Currency.Add(currency);
+            GetCurrencyExchangerContext().SaveChanges();
         }
     }
 }

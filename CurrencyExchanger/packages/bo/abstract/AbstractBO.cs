@@ -4,7 +4,7 @@ namespace CurrencyExchanger.packages.bo.@abstract
 {
     public abstract class AbstractBO
     {
-        protected static CurrencyExchangerContext GetCurrencyexchangerContext()
+        protected static CurrencyExchangerContext GetCurrencyExchangerContext()
         {
             return SessionService.GetInstance().DbContext;
         }

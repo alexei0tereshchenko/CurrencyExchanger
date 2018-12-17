@@ -7,8 +7,8 @@ namespace CurrencyExchanger.packages.bo.currency
     {
         public override void Delete(IModel currency)
         {
-            GetCurrencyexchangerContext().Currency.Remove((Currency)currency);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().Currency.Remove((Currency)currency);
+            GetCurrencyExchangerContext().SaveChanges();
         }
     }
 }

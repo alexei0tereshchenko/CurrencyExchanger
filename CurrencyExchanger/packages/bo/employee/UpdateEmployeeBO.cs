@@ -68,14 +68,14 @@ namespace CurrencyExchanger.packages.bo.employee
                 }
             }
 
-            GetCurrencyexchangerContext().User.Update(user);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().User.Update(user);
+            GetCurrencyExchangerContext().SaveChanges();
         }
 
         public static void UpdateUser(User user)
         {
-            GetCurrencyexchangerContext().User.Update(user);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().User.Update(user);
+            GetCurrencyExchangerContext().SaveChanges();
         }
     }
 }

@@ -18,8 +18,8 @@ namespace CurrencyExchanger.packages.bo.employee
 
         public override void Delete(IModel user)
         {
-            GetCurrencyexchangerContext().User.Remove((User)user);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().User.Remove((User)user);
+            GetCurrencyExchangerContext().SaveChanges();
         }
     }
 }

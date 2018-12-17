@@ -8,7 +8,7 @@ namespace CurrencyExchanger.packages.bo.customer
     {
         public override IModel[] DoRead()
         {
-            return GetCurrencyexchangerContext().Person.ToArray();
+            return GetCurrencyExchangerContext().Person.ToArray();
         }
     }
 }

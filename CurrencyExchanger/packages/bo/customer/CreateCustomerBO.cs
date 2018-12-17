@@ -38,8 +38,8 @@ namespace CurrencyExchanger.packages.bo.customer
                 }
             }
 
-            GetCurrencyexchangerContext().Person.Add(person);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().Person.Add(person);
+            GetCurrencyExchangerContext().SaveChanges();
         }
     }
 }

@@ -19,8 +19,8 @@ namespace CurrencyExchanger.packages.bo.currency
                     currency.Purchase = (double)row.Value;
             }
 
-            GetCurrencyexchangerContext().Currency.Update(currency);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().Currency.Update(currency);
+            GetCurrencyExchangerContext().SaveChanges();
         }
     }
 }

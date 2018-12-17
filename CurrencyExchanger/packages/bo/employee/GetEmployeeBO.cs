@@ -19,18 +19,18 @@ namespace CurrencyExchanger.packages.bo.employee
 
         public override IModel[] DoRead()
         {
-            return GetCurrencyexchangerContext().User.ToArray();
+            return GetCurrencyExchangerContext().User.ToArray();
         }
         
         public static User GetUserByLogin(string login, string password)
         {
-            var user = GetCurrencyexchangerContext().User.FirstOrDefault(u => u.Login.Equals(login));
+            var user = GetCurrencyExchangerContext().User.FirstOrDefault(u => u.Login.Equals(login));
             return user != null && user.Password.Equals(password) ? user : null;
         }
 
         public static User GetUserById(int userId)
         {
-            return GetCurrencyexchangerContext().User.FirstOrDefault(u => u.UserId.Equals(userId));
+            return GetCurrencyExchangerContext().User.FirstOrDefault(u => u.UserId.Equals(userId));
         }
     }
 }

@@ -69,14 +69,14 @@ namespace CurrencyExchanger.packages.bo.employee
                 }
             }
 
-            GetCurrencyexchangerContext().User.Add(user);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().User.Add(user);
+            GetCurrencyExchangerContext().SaveChanges();
         }
 
         public static void CreateUser(User user)
         {
             user.UserId = 1;
-            var users = GetCurrencyexchangerContext().User.ToArray();
+            var users = GetCurrencyExchangerContext().User.ToArray();
             foreach (var u in users)
             {
                 if (u.UserId == user.UserId)
@@ -84,8 +84,8 @@ namespace CurrencyExchanger.packages.bo.employee
                     user.UserId = u.UserId + 1;
                 }
             }
-            GetCurrencyexchangerContext().User.Add(user);
-            GetCurrencyexchangerContext().SaveChanges();
+            GetCurrencyExchangerContext().User.Add(user);
+            GetCurrencyExchangerContext().SaveChanges();
         }
     }
 }
