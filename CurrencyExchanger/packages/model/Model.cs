@@ -1,6 +1,6 @@
 namespace CurrencyExchanger.packages.model
 {
-    public interface Model
+    public interface IModel
     {
         
     }

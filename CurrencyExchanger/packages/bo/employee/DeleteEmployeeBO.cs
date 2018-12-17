@@ -16,7 +16,7 @@ namespace CurrencyExchanger.packages.bo.employee
             return _instance ?? (_instance = new DeleteEmployeeBO());
         }
 
-        public override void Delete(Model user)
+        public override void Delete(IModel user)
         {
             GetCurrencyexchangerContext().User.Remove((User)user);
             GetCurrencyexchangerContext().SaveChanges();

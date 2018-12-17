@@ -17,7 +17,7 @@ namespace CurrencyExchanger.packages.bo.currency
             return _instance ?? (_instance = new GetCurrencyBO());
         }
 
-        public override Model[] DoRead()
+        public override IModel[] DoRead()
         {
             return GetCurrencyexchangerContext().Currency.ToArray();
         }     

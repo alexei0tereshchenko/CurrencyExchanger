@@ -6,7 +6,7 @@ namespace CurrencyExchanger.packages.bo.currency
 {
     public class DeleteCurrencyBO:AbstractDeleteBO
     {
-        public override void Delete(Model currency)
+        public override void Delete(IModel currency)
         {
             GetCurrencyexchangerContext().Currency.Remove((Currency)currency);
             GetCurrencyexchangerContext().SaveChanges();

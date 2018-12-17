@@ -17,7 +17,7 @@ namespace CurrencyExchanger.packages.bo.employee
             return _instance ?? (_instance = new GetEmployeeBO());
         }
 
-        public override Model[] DoRead()
+        public override IModel[] DoRead()
         {
             return GetCurrencyexchangerContext().User.ToArray();
         }
