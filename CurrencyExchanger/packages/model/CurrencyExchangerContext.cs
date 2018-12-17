@@ -1,9 +1,7 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 namespace CurrencyExchanger.packages.model
 {
-    public partial class CurrencyexchangerContext : DbContext
+    public sealed  class CurrencyexchangerContext : DbContext
     {
         public CurrencyexchangerContext()
         {
@@ -14,10 +12,10 @@ namespace CurrencyExchanger.packages.model
         {
         }
 
-        public virtual DbSet<Currency> Currency { get; set; }
-        public virtual DbSet<Person> Person { get; set; }
-        public virtual DbSet<Report> Report { get; set; }
-        public virtual DbSet<User> User { get; set; }
+        public DbSet<Currency> Currency { get; set; }
+        public DbSet<Person> Person { get; set; }
+        public DbSet<Report> Report { get; set; }
+        public DbSet<User> User { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

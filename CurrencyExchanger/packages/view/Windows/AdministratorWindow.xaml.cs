@@ -25,5 +25,15 @@ namespace CurrencyExchanger
         {
             InitializeComponent();
         }
+
+        private void ModernButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Link_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

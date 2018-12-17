@@ -24,5 +24,11 @@ namespace CurrencyExchanger.Pages
         {
             InitializeComponent();
         }
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            Window.GetWindow(this).Close();
+        }
     }
 }

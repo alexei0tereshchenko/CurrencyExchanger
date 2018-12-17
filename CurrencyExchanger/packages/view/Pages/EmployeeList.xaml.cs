@@ -46,5 +46,14 @@ namespace CurrencyExchanger.pages
             var addEmployeeDialog = new AddEmployeeDialog();
             addEmployeeDialog.ShowWithPropagate(this);
         }
+
+
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            Window.GetWindow(this).Close();
+        }
     }
 }
