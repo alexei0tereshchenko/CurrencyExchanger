@@ -32,5 +32,11 @@ namespace CurrencyExchanger.packages.bo.currency
             return GetCurrencyExchangerContext().Currency
                 .FirstOrDefault(currency => currency.CurrencyName.Equals(currencyName));
         }
+
+        public static Currency GetCurrencyById(int currencyId)
+        {
+            return GetCurrencyExchangerContext().Currency
+                .FirstOrDefault(currency => currency.CurrencyId.Equals(currencyId));
+        }
     }
 }

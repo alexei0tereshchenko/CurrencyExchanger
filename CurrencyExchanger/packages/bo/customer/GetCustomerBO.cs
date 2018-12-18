@@ -15,5 +15,10 @@ namespace CurrencyExchanger.packages.bo.customer
         {
             return GetCurrencyExchangerContext().Person.FirstOrDefault(p => p.PassportId.Equals(passportId));
         }
+
+        public static Person GetPersonById(int personId)
+        {
+            return GetCurrencyExchangerContext().Person.FirstOrDefault(p => p.PersonId.Equals(personId));
+        }
     }
 }
