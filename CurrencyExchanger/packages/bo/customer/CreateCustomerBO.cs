@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.model;
 
@@ -39,6 +40,22 @@ namespace CurrencyExchanger.packages.bo.customer
                 }
             }
 
+            GetCurrencyExchangerContext().Person.Add(person);
+            GetCurrencyExchangerContext().SaveChanges();
+        }
+        
+        public static void CreateCustomer(Person person)
+        {
+            person.PersonId = 1;
+            var persons = GetCurrencyExchangerContext().Person.ToArray();
+            
+            foreach (var p in persons)
+            {
+                if (p.PersonId == person.PersonId)
+                {
+                    person.PersonId = p.PersonId + 1;
+                }
+            }
             GetCurrencyExchangerContext().Person.Add(person);
             GetCurrencyExchangerContext().SaveChanges();
         }
