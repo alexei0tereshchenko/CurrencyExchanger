@@ -48,8 +48,8 @@
             <TextBox Name="Purchase"/>
         </StackPanel>
 
-        <Button Content="Submit" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1" Click="Button_Click"/>
-        <Button Content="Cancel" Grid.Column="2" VerticalAlignment="Bottom" Grid.Row="1" Click="Button_Click_1"/>
+        <Button Content="Submit" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1" Click="Submit_Click"/>
+        <Button Content="Cancel" Grid.Column="2" VerticalAlignment="Bottom" Grid.Row="1" Click="Cancel_Click"/>
        
     </Grid>
     

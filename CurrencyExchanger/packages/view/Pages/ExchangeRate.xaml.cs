@@ -38,7 +38,7 @@ namespace CurrencyExchanger.packages.view.Pages
 
         private void EditCurrency_Click(object sender, RoutedEventArgs e)
         {
-            var editCurrencyDialog = new AddNewOrEditCurrencyDialog {Currencies = _currencies};
+            var editCurrencyDialog = new AddNewOrEditCurrencyDialog {ExchangeRatePage = this};
             editCurrencyDialog.Show();
         }
 
