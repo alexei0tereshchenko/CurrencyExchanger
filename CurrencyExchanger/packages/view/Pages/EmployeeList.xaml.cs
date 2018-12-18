@@ -9,10 +9,6 @@ using CurrencyExchanger.packages.view.Dialogs;
 
 namespace CurrencyExchanger.pages
 {
-    /// <inheritdoc cref="UserControl"/>
-    /// <summary>
-    /// Interaction logic for EmployeeList.xaml
-    /// </summary>
     public partial class EmployeeList : UserControl
     {
         public EmployeeList()

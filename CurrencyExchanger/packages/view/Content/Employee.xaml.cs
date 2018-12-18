@@ -7,10 +7,6 @@ using FirstFloor.ModernUI.Windows.Controls;
 
 namespace CurrencyExchanger.packages.view.Content
 {
-    /// <inheritdoc cref="UserControl" />
-    /// <summary>
-    /// Interaction logic for Employee.xaml
-    /// </summary>
     public partial class Employee : UserControl
     {
         public Employee()

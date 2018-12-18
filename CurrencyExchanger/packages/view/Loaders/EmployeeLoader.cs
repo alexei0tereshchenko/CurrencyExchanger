@@ -1,10 +1,5 @@
-﻿using CurrencyExchanger.Content;
-using FirstFloor.ModernUI.Windows;
+﻿using FirstFloor.ModernUI.Windows;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CurrencyExchanger.packages.bo.employee;
 using CurrencyExchanger.packages.view.Content;
 using CurrencyExchanger.pages;

@@ -7,10 +7,6 @@ using CurrencyExchanger.packages.view.Dialogs;
 
 namespace CurrencyExchanger.packages.view.Pages
 {
-    /// <inheritdoc cref="UserControl" />
-    /// <summary>
-    /// Interaction logic for ExchangeRate.xaml
-    /// </summary>
     public partial class ExchangeRate : UserControl
     {
         public ExchangeRate()

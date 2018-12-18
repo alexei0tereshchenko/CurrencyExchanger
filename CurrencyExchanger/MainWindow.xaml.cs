@@ -1,17 +1,9 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows;
 using System.Windows.Media;
 using CurrencyExchanger.packages.bo;
-using CurrencyExchanger.pages;
-using CurrencyExchanger.Windows;
-using DMSkin.WPF.Small;
 
 namespace CurrencyExchanger
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow
     {
         public MainWindow()
