@@ -2,7 +2,7 @@ using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.packages.bo.currency
+namespace Currency.bo
 {
     public class GetCurrencyBO : AbstractReadBO
     {
@@ -22,7 +22,7 @@ namespace CurrencyExchanger.packages.bo.currency
             return GetCurrencyExchangerContext().Currency.ToArray();
         }
 
-        public static Currency GetCurrencyByName(string currencyName)
+        public static CurrencyExchanger.packages.model.Currency GetCurrencyByName(string currencyName)
         {
             if (currencyName == string.Empty)
             {
@@ -33,7 +33,7 @@ namespace CurrencyExchanger.packages.bo.currency
                 .FirstOrDefault(currency => currency.CurrencyName.Equals(currencyName));
         }
 
-        public static Currency GetCurrencyById(int currencyId)
+        public static CurrencyExchanger.packages.model.Currency GetCurrencyById(int currencyId)
         {
             return GetCurrencyExchangerContext().Currency
                 .FirstOrDefault(currency => currency.CurrencyId.Equals(currencyId));

@@ -2,7 +2,7 @@ using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.packages.bo.report
+namespace Report.bo
 {
     public class GetReportsBO : AbstractReadBO
     {

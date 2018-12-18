@@ -1,4 +1,5 @@
 using CurrencyExchanger.packages.model;
+using User;
 
 namespace CurrencyExchanger.packages.bo.@abstract
 {

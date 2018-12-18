@@ -2,12 +2,12 @@ using System;
 using System.Linq;
 using System.Windows;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.bo.customer;
-using CurrencyExchanger.packages.bo.report;
-using CurrencyExchanger.packages.model;
 using FirstFloor.ModernUI.Windows.Controls;
+using Person.bo;
+using Report.bo;
+using User;
 
-namespace CurrencyExchanger.packages.bo.currency
+namespace Currency.bo
 {
     public class ExchangeCurrencyBO : AbstractBO
     {
@@ -17,7 +17,7 @@ namespace CurrencyExchanger.packages.bo.currency
             var person = GetCustomerBO.GetCustomerByPassportId(passportId);
             if (person == null)
             {
-                person = new Person
+                person = new CurrencyExchanger.packages.model.Person
                 {
                     FirstName = personFirstName, LastName = personLastName, BirthDate = birthDate,
                     PassportSeries = passportSeries, PassportId = passportId
@@ -41,7 +41,7 @@ namespace CurrencyExchanger.packages.bo.currency
                 return;
             }
 
-            var outReport = new Report
+            var outReport = new CurrencyExchanger.packages.model.Report
             {
                 UserId = SessionService.GetInstance().User.UserId,
                 PersonId = person.PersonId,
@@ -57,10 +57,10 @@ namespace CurrencyExchanger.packages.bo.currency
                                      " units of currency.", "Success!", MessageBoxButton.OK);
         }
 
-        private static bool ValidateForDailyLimits(double amount, Currency currency)
+        private static bool ValidateForDailyLimits(double amount, CurrencyExchanger.packages.model.Currency currency)
         {
             const int maxDayLimit = 1000;
-            var dailyAmountExchanged = ((Report[]) GetReportsBO.GetInstance().DoRead())
+            var dailyAmountExchanged = ((CurrencyExchanger.packages.model.Report[]) GetReportsBO.GetInstance().DoRead())
                 .Where(report =>
                     currency.CurrencyId.Equals(report.CurrencyId) &&
                     DateTime.Now.ToShortDateString().Equals(report.Date.ToShortDateString()))

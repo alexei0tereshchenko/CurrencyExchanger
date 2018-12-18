@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.packages.bo.currency
+namespace Currency.bo
 {
     public class AddCurrencyBO: AbstractCreateBO
     {
@@ -19,7 +18,7 @@ namespace CurrencyExchanger.packages.bo.currency
         }
         public override void DoCreate(Dictionary<string, object> parameters)
         {
-            var currency = new Currency();
+            var currency = new CurrencyExchanger.packages.model.Currency();
             foreach (var row in parameters)
             {
                 if (row.Key.Equals("Sell"))
@@ -41,7 +40,7 @@ namespace CurrencyExchanger.packages.bo.currency
             GetCurrencyExchangerContext().SaveChanges();
         }
 
-        public void CreateCurrency(Currency currency)
+        public void CreateCurrency(CurrencyExchanger.packages.model.Currency currency)
         {
             currency.CurrencyId = 1;
             var currencies = GetCurrencyExchangerContext().Currency.ToArray();

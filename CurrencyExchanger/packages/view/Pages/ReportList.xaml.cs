@@ -1,9 +1,9 @@
 ﻿using System.Windows.Controls;
-using CurrencyExchanger.packages.bo.currency;
-using CurrencyExchanger.packages.bo.customer;
-using CurrencyExchanger.packages.bo.employee;
-using CurrencyExchanger.packages.bo.report;
+using Currency.bo;
 using CurrencyExchanger.packages.model;
+using Person.bo;
+using Report.bo;
+using User.bo;
 
 namespace CurrencyExchanger.Pages
 {
@@ -12,7 +12,7 @@ namespace CurrencyExchanger.Pages
         public ReportList()
         {
             InitializeComponent();
-            foreach (var report in (Report[]) GetReportsBO.GetInstance().DoRead())
+            foreach (var report in (packages.model.Report[]) GetReportsBO.GetInstance().DoRead())
             {
                 var user = GetEmployeeBO.GetUserById(report.UserId);
                 var currency = GetCurrencyBO.GetCurrencyById(report.CurrencyId);

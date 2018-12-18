@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using CurrencyExchanger.packages.bo.currency;
+using Currency.bo;
 using CurrencyExchanger.packages.model;
 using CurrencyExchanger.packages.view.Dialogs;
 
@@ -17,16 +17,16 @@ namespace CurrencyExchanger.packages.view.Pages
 
         public void Reload()
         {
-            _currencies = (Currency[]) GetCurrencyBO.GetInstance().DoRead();
+            _currencies = (model.Currency[]) GetCurrencyBO.GetInstance().DoRead();
             var currencyDate = GetData();
             DG1.DataContext = currencyDate;
         }
 
-        private static Currency[] _currencies;
+        private static model.Currency[] _currencies;
 
-        private static ObservableCollection<Currency> GetData()
+        private static ObservableCollection<model.Currency> GetData()
         {
-            var currencyRates = new ObservableCollection<Currency>();
+            var currencyRates = new ObservableCollection<model.Currency>();
             foreach (var model in _currencies)
             {
                 var currency = model;

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using CurrencyExchanger.packages.bo.employee;
 using CurrencyExchanger.packages.model;
 using FirstFloor.ModernUI.Presentation;
 using CurrencyExchanger.packages.view.Dialogs;
+using User.bo;
 
 
 namespace CurrencyExchanger.pages
@@ -21,7 +21,7 @@ namespace CurrencyExchanger.pages
         {
             var allEmployees = GetEmployeeBO.GetInstance().DoRead();
             var employeeLinks = new LinkCollection();
-            foreach (var employee in (User[])allEmployees)
+            foreach (var employee in (packages.model.User[])allEmployees)
             {
                 if (employee.UserId != 1)
                 {

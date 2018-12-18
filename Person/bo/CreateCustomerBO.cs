@@ -2,15 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.packages.bo.customer
+namespace Person.bo
 {
     public class CreateCustomerBO : AbstractCreateBO
     {
         public override void DoCreate(Dictionary<string, object> parameters)
         {
-            var person = new Person();
+            var person = new CurrencyExchanger.packages.model.Person();
             
             foreach (var row in parameters)
             {
@@ -44,7 +43,7 @@ namespace CurrencyExchanger.packages.bo.customer
             GetCurrencyExchangerContext().SaveChanges();
         }
         
-        public static void CreateCustomer(Person person)
+        public static void CreateCustomer(CurrencyExchanger.packages.model.Person person)
         {
             person.PersonId = 1;
             var persons = GetCurrencyExchangerContext().Person.ToArray();

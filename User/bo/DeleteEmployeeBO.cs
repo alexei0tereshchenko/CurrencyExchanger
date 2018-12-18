@@ -1,7 +1,7 @@
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.packages.bo.employee
+namespace User.bo
 {
     public class DeleteEmployeeBO:AbstractDeleteBO
     {
@@ -18,7 +18,7 @@ namespace CurrencyExchanger.packages.bo.employee
 
         public override void Delete(IModel user)
         {
-            GetCurrencyExchangerContext().User.Remove((User)user);
+            GetCurrencyExchangerContext().User.Remove((CurrencyExchanger.packages.model.User)user);
             GetCurrencyExchangerContext().SaveChanges();
         }
     }

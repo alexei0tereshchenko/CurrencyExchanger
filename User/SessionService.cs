@@ -1,8 +1,9 @@
-using CurrencyExchanger.packages.bo.employee;
+using CurrencyExchanger;
 using CurrencyExchanger.packages.model;
-using CurrencyExchanger.Windows;
+using CurrencyExchanger.packages.view.Windows;
+using User.bo;
 
-namespace CurrencyExchanger.packages.bo
+namespace User
 {
     public class SessionService
     {
@@ -29,7 +30,7 @@ namespace CurrencyExchanger.packages.bo
 
         public CurrencyExchangerContext DbContext { get; private set; }
 
-        public  User User { get; private set; }
+        public  CurrencyExchanger.packages.model.User User { get; private set; }
 
         public bool Authorizate(string login, string password)
         {

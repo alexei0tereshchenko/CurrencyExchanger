@@ -1,8 +1,8 @@
 ﻿using FirstFloor.ModernUI.Windows;
 using System;
-using CurrencyExchanger.packages.bo.employee;
 using CurrencyExchanger.packages.view.Content;
 using CurrencyExchanger.pages;
+using User.bo;
 
 namespace CurrencyExchanger
 {

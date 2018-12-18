@@ -1,6 +1,6 @@
 ﻿using FirstFloor.ModernUI.Windows.Controls;
 
-namespace CurrencyExchanger.Windows
+namespace CurrencyExchanger.packages.view.Windows
 {
     public partial class EmployeeWindow : ModernWindow
     {

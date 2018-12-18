@@ -1,9 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using CurrencyExchanger.packages.bo.employee;
-using CurrencyExchanger.packages.model;
 using CurrencyExchanger.pages;
 using FirstFloor.ModernUI.Windows.Controls;
+using User.bo;
 
 namespace CurrencyExchanger.packages.view.Content
 {
@@ -14,7 +13,7 @@ namespace CurrencyExchanger.packages.view.Content
             InitializeComponent();
         }
 
-        public User User { private get; set; }
+        public model.User User { private get; set; }
         public EmployeeList EmployeeList { private get; set; }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

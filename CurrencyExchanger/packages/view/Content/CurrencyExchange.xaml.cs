@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
-using CurrencyExchanger.packages.bo.currency;
+using Currency.bo;
 using CurrencyExchanger.packages.model;
 
 namespace CurrencyExchanger.Content
@@ -11,7 +11,7 @@ namespace CurrencyExchanger.Content
         public CurrencyExchange()
         {
             InitializeComponent();
-            foreach (var currency in (Currency[]) GetCurrencyBO.GetInstance().DoRead())
+            foreach (var currency in (packages.model.Currency[]) GetCurrencyBO.GetInstance().DoRead())
             {
                 ExchangingCurrency.Items.Add(new ComboBoxItem {Content = currency.CurrencyName});
             }

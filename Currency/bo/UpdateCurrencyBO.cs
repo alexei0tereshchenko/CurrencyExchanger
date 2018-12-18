@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.packages.bo.currency
+namespace Currency.bo
 {
     public class UpdateCurrencyBO:AbstractUpdateBO
     {
@@ -19,7 +18,7 @@ namespace CurrencyExchanger.packages.bo.currency
         
         public override void DoUpdate(int currencyId, Dictionary<string, object> parameters)
         {
-            var currency = new Currency {CurrencyId = currencyId};
+            var currency = new CurrencyExchanger.packages.model.Currency {CurrencyId = currencyId};
             
             foreach (var row in parameters)
             {
@@ -43,7 +42,7 @@ namespace CurrencyExchanger.packages.bo.currency
             GetCurrencyExchangerContext().SaveChanges();
         }
         
-        public static void UpdateCurrency(Currency currency)
+        public static void UpdateCurrency(CurrencyExchanger.packages.model.Currency currency)
         {
             GetCurrencyExchangerContext().Currency.Update(currency);
             GetCurrencyExchangerContext().SaveChanges();

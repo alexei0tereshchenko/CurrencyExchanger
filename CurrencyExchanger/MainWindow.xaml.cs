@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Media;
-using CurrencyExchanger.packages.bo;
+using User;
 
 namespace CurrencyExchanger
 {
@@ -57,9 +57,6 @@ namespace CurrencyExchanger
             else
             {
                 Close();
-            }
-            {
-                
             }
         }
     }

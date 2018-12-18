@@ -1,18 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.packages.bo.employee
+namespace User.bo
 {
-    public class UpdateEmployeeBO:AbstractUpdateBO
+    public class AddEmployeeBO : AbstractCreateBO
     {
-        public override void DoUpdate(int userId, Dictionary<string, object> parameters)
+        public override void DoCreate(Dictionary<string, object> parameters)
         {
-           var user = new User{UserId = userId};
+            var user = new CurrencyExchanger.packages.model.User();
+
             foreach (var row in parameters)
             {
-                if (row.Key.Equals("FirstName"))
+                if (row.Key.Equals("FirstName")) //commit test
                 {
                     user.FirstName = row.Value.ToString();
                 }
@@ -68,13 +69,24 @@ namespace CurrencyExchanger.packages.bo.employee
                 }
             }
 
-            GetCurrencyExchangerContext().User.Update(user);
+            GetCurrencyExchangerContext().User.Add(user);
             GetCurrencyExchangerContext().SaveChanges();
         }
 
-        public static void UpdateUser(User user)
+        public static void CreateUser(CurrencyExchanger.packages.model.User user)
         {
-            GetCurrencyExchangerContext().User.Update(user);
+            user.UserId = 1;
+            var users = GetCurrencyExchangerContext().User.ToArray();
+
+            foreach (var u in users)
+            {
+                if (u.UserId == user.UserId)
+                {
+                    user.UserId = u.UserId + 1;
+                }
+            }
+
+            GetCurrencyExchangerContext().User.Add(user);
             GetCurrencyExchangerContext().SaveChanges();
         }
     }
