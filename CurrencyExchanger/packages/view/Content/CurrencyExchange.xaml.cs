@@ -19,9 +19,11 @@ namespace CurrencyExchanger.Content
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
+            var isForSell = SellRadioButton.IsChecked.Value;
+
             ExchangeCurrencyBO.ExchangeCurrency(TextFirstName.Text, TextLastName.Text,
                 DateBirth.SelectedDate.Value, PassportSeries.Text, PassportID.Text, ExchangingCurrency.Text,
-                double.Parse(Amount.Text, CultureInfo.InvariantCulture.NumberFormat));
+                double.Parse(Amount.Text, CultureInfo.InvariantCulture.NumberFormat), isForSell);
         }
     }
 }

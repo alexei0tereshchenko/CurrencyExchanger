@@ -3,19 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:content="clr-namespace:CurrencyExchanger.Content"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
-            <StackPanel MinWidth="200" Name="Reports">
-                <content:Report />
-                <content:Report />
-                <content:Report />
-                <content:Report />
-                <content:Report />
-                <content:Report />
-            </StackPanel>
+            <StackPanel MinWidth="200" Name="Reports" />
         </ScrollViewer>
     </Grid>
 </UserControl>

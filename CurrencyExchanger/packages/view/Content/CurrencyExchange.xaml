@@ -29,11 +29,11 @@
 
                     <StackPanel>
                         <Label Content="First name" Width="130" Target="{Binding ElementName=TextFirstName}" />
-                        <TextBox x:Name="TextFirstName" Width="150"/>
+                        <TextBox x:Name="TextFirstName" Width="150" />
                     </StackPanel>
                     <StackPanel>
                         <Label Content="Last name" Width="130" Target="{Binding ElementName=TextLastName}" />
-                        <TextBox x:Name="TextLastName" Width="150"/>
+                        <TextBox x:Name="TextLastName" Width="150" />
                     </StackPanel>
                     <StackPanel>
                         <Label Content="Birth date" Width="130" Target="{Binding ElementName=DateBirth}" />
@@ -58,14 +58,14 @@
                     </StackPanel>
                     <StackPanel>
                         <Label />
-                        <RadioButton>
+                        <RadioButton Name="SellRadioButton">
                             <TextBlock FontWeight="Bold" Width="30">Sell</TextBlock>
                         </RadioButton>
-                        <RadioButton>
+                        <RadioButton Name="PurchaseRadioButton">
                             <TextBlock FontWeight="Bold" Width="60">Purchase</TextBlock>
                         </RadioButton>
                     </StackPanel>
-                    <Button Content="Submit" Margin="100,16,0,0" HorizontalAlignment="Left" Click="ButtonBase_OnClick"/>
+                    <Button Content="Submit" Margin="100,16,0,0" HorizontalAlignment="Left" Click="ButtonBase_OnClick" />
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

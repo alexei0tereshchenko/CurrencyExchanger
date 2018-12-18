@@ -198,7 +198,6 @@
       <DependentUpon>DeleteCurrencyDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="packages\view\Loaders\EmployeeLoader.cs" />
-    <Compile Include="packages\view\Loaders\ReportLoader.cs" />
     <Compile Include="packages\view\Pages\CurrencyExchange.xaml.cs">
       <DependentUpon>CurrencyExchange.xaml</DependentUpon>
     </Compile>

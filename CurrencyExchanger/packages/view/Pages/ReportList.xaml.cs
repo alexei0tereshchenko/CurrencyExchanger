@@ -12,12 +12,19 @@ namespace CurrencyExchanger.Pages
         public ReportList()
         {
             InitializeComponent();
-            foreach (var report in (Report[])GetReportsBO.GetInstance().DoRead())
+            foreach (var report in (Report[]) GetReportsBO.GetInstance().DoRead())
             {
                 var user = GetEmployeeBO.GetUserById(report.UserId);
                 var currency = GetCurrencyBO.GetCurrencyById(report.CurrencyId);
                 var person = GetCustomerBO.GetPersonById(report.PersonId);
-                Reports.Children.Add(new TextBlock{Text = "Person: "});
+                Reports.Children.Add(new TextBlock
+                {
+                    Text = " - " + person.FirstName + " " + person.LastName + ", " +
+                           person.BirthDate.Value.ToShortDateString() + " birth, passport id: " + person.PassportId +
+                           " has exchanged " + report.IncomAmount + " " + currency.CurrencyName + " to " +
+                           report.OutcomeAmount + " units. \nResponsible for the operation is " + user.FirstName + " " +
+                           user.LastName + ". Date: " + report.Date.ToShortDateString() + ".\n\n"
+                });
             }
         }
     }
