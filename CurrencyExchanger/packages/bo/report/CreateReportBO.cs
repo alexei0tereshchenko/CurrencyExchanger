@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CurrencyExchanger.packages.bo.@abstract;
 using CurrencyExchanger.packages.model;
 
@@ -47,6 +48,22 @@ namespace CurrencyExchanger.packages.bo.report
             report.CurrencyId = report.Currency.CurrencyId;
             report.PersonId = report.Person.PersonId;
             report.UserId = report.User.UserId;
+            GetCurrencyExchangerContext().Report.Add(report);
+            GetCurrencyExchangerContext().SaveChanges();
+        }
+        
+        public static void CreateReport(Report report)
+        {
+            report.ReportId = 1;
+            var reports = GetCurrencyExchangerContext().Report.ToArray();
+            
+            foreach (var r in reports)
+            {
+                if (r.ReportId == report.ReportId)
+                {
+                    report.ReportId = r.ReportId + 1;
+                }
+            }
             GetCurrencyExchangerContext().Report.Add(report);
             GetCurrencyExchangerContext().SaveChanges();
         }
