@@ -4,7 +4,7 @@ using CurrencyExchanger.packages.model;
 
 namespace CurrencyExchanger.packages.bo.currency
 {
-    public class GetCurrencyBO:AbstractReadBO
+    public class GetCurrencyBO : AbstractReadBO
     {
         private static GetCurrencyBO _instance;
 
@@ -20,6 +20,17 @@ namespace CurrencyExchanger.packages.bo.currency
         public override IModel[] DoRead()
         {
             return GetCurrencyExchangerContext().Currency.ToArray();
-        }     
+        }
+
+        public static Currency GetCurrencyByName(string currencyName)
+        {
+            if (currencyName == string.Empty)
+            {
+                return null;
+            }
+
+            return GetCurrencyExchangerContext().Currency
+                .FirstOrDefault(currency => currency.CurrencyName.Equals(currencyName));
+        }
     }
 }

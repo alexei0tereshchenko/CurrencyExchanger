@@ -12,12 +12,18 @@ namespace CurrencyExchanger.packages.view.Pages
         public ExchangeRate()
         {
             InitializeComponent();
+            Reload();
+        }
+
+        public void Reload()
+        {
             _currencies = (Currency[]) GetCurrencyBO.GetInstance().DoRead();
             var currencyDate = GetData();
             DG1.DataContext = currencyDate;
         }
 
         private static Currency[] _currencies;
+
         private static ObservableCollection<Currency> GetData()
         {
             var currencyRates = new ObservableCollection<Currency>();
@@ -26,18 +32,19 @@ namespace CurrencyExchanger.packages.view.Pages
                 var currency = model;
                 currencyRates.Add(currency);
             }
+
             return currencyRates;
         }
 
         private void EditCurrency_Click(object sender, RoutedEventArgs e)
         {
             var editCurrencyDialog = new AddNewOrEditCurrencyDialog {Currencies = _currencies};
-            editCurrencyDialog.Show();            
+            editCurrencyDialog.Show();
         }
 
         private void DeleteCurrency_OnClick(object sender, RoutedEventArgs e)
         {
-            var deleteCurrencyDialog = new DeleteCurrencyDialog{Currencies = _currencies};
+            var deleteCurrencyDialog = new DeleteCurrencyDialog {ExchangeRatePage = this};
             deleteCurrencyDialog.Show();
         }
     }
