@@ -1,6 +1,6 @@
 using System.Linq;
-using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
+using Abstract.bo.@abstract;
+using Abstract.model;
 
 namespace Currency.bo
 {
@@ -22,7 +22,7 @@ namespace Currency.bo
             return GetCurrencyExchangerContext().Currency.ToArray();
         }
 
-        public static CurrencyExchanger.packages.model.Currency GetCurrencyByName(string currencyName)
+        public static Abstract.model.Currency GetCurrencyByName(string currencyName)
         {
             if (currencyName == string.Empty)
             {
@@ -33,7 +33,7 @@ namespace Currency.bo
                 .FirstOrDefault(currency => currency.CurrencyName.Equals(currencyName));
         }
 
-        public static CurrencyExchanger.packages.model.Currency GetCurrencyById(int currencyId)
+        public static Abstract.model.Currency GetCurrencyById(int currencyId)
         {
             return GetCurrencyExchangerContext().Currency
                 .FirstOrDefault(currency => currency.CurrencyId.Equals(currencyId));

@@ -8,7 +8,7 @@ namespace CurrencyExchanger.packages.view.Dialogs
 {
     public partial class AddNewOrEditCurrencyDialog : ModernDialog
     {
-        private static model.Currency[] Currencies { get; set; }
+        private static Abstract.model.Currency[] Currencies { get; set; }
 
         public ExchangeRate ExchangeRatePage { private get; set; }
 
@@ -23,7 +23,7 @@ namespace CurrencyExchanger.packages.view.Dialogs
         {
             if (GetCurrencyBO.GetCurrencyByName(CurrencyBox.Text) == null)
             {
-                var currency = new model.Currency
+                var currency = new Abstract.model.Currency
                 {
                     CurrencyName = CurrencyBox.Text,
                     Purchase = double.Parse(Purchase.Text, CultureInfo.InvariantCulture.NumberFormat),

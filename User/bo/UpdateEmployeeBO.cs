@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
-using CurrencyExchanger.packages.bo.@abstract;
+using Abstract.bo.@abstract;
+using User = Abstract.model.User;
 
 namespace User.bo
 {
@@ -8,7 +9,7 @@ namespace User.bo
     {
         public override void DoUpdate(int userId, Dictionary<string, object> parameters)
         {
-           var user = new CurrencyExchanger.packages.model.User{UserId = userId};
+           var user = new Abstract.model.User{UserId = userId};
             foreach (var row in parameters)
             {
                 if (row.Key.Equals("FirstName"))
@@ -71,7 +72,7 @@ namespace User.bo
             GetCurrencyExchangerContext().SaveChanges();
         }
 
-        public static void UpdateUser(CurrencyExchanger.packages.model.User user)
+        public static void UpdateUser(Abstract.model.User user)
         {
             GetCurrencyExchangerContext().User.Update(user);
             GetCurrencyExchangerContext().SaveChanges();

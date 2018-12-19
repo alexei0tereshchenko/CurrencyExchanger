@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Media;
+using CurrencyExchanger.packages.view.Windows;
 using User;
 
 namespace CurrencyExchanger
@@ -49,14 +50,23 @@ namespace CurrencyExchanger
 
         private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            if (!SessionService.GetInstance().Authorizate(LoginBox.Text, PasswordBox.Password))
+            var loginResult = SessionService.GetInstance().Authorizate(LoginBox.Text, PasswordBox.Password);
+            switch (loginResult)
             {
-                TextBox.Text = "Wrong username or password.";
-                TextBox.Foreground = Brushes.Red;
-            }
-            else
-            {
-                Close();
+                case 0:
+                    TextBox.Text = "Wrong username or password.";
+                    TextBox.Foreground = Brushes.Red;
+                    break;
+                case 1:
+                    var administratorWindow = new AdministratorWindow();
+                    administratorWindow.Show();
+                    Close();
+                    break;
+                case 2:
+                    var employeeWindow = new EmployeeWindow();
+                    employeeWindow.Show();
+                    Close();
+                    break;
             }
         }
     }

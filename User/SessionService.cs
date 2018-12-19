@@ -1,6 +1,4 @@
-using CurrencyExchanger;
-using CurrencyExchanger.packages.model;
-using CurrencyExchanger.packages.view.Windows;
+using Abstract.model;
 using User.bo;
 
 namespace User
@@ -22,7 +20,7 @@ namespace User
 
             if (_instance.DbContext == null)
             {
-                _instance.DbContext = new CurrencyExchangerContext();
+                _instance.DbContext = CurrencyExchangerContext.GetInstance();
             }
 
             return _instance;
@@ -30,27 +28,17 @@ namespace User
 
         public CurrencyExchangerContext DbContext { get; private set; }
 
-        public  CurrencyExchanger.packages.model.User User { get; private set; }
+        public Abstract.model.User User { get; private set; }
 
-        public bool Authorizate(string login, string password)
+        public int Authorizate(string login, string password)
         {
             var user = GetEmployeeBO.GetUserByLogin(login, password);
             if (user == null)
             {
-                return false;
+                return 0;
             }
             User = user;
-            if (User.Login.Equals("ADMIN"))
-            {
-                var administratorWindow = new AdministratorWindow();
-                administratorWindow.Show();
-            }
-            else
-            {
-                var employeeWindow = new EmployeeWindow();
-                employeeWindow.Show();
-            }
-            return true;
+            return User.Login.Equals("ADMIN") ? 1 : 2;
         }
     }
 }

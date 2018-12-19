@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CurrencyExchanger\CurrencyExchanger.csproj">
-      <Project>{f16d571f-692f-4e4d-bd03-b9f0da7758f3}</Project>
-      <Name>CurrencyExchanger</Name>
+    <ProjectReference Include="..\Abstract\Abstract.csproj">
+      <Project>{df426d64-0801-44d8-a969-81c4f1171708}</Project>
+      <Name>Abstract</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

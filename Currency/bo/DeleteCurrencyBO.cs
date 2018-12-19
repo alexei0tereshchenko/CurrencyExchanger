@@ -1,5 +1,7 @@
-using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
+
+
+using Abstract.bo.@abstract;
+using Abstract.model;
 
 namespace Currency.bo
 {
@@ -18,7 +20,7 @@ namespace Currency.bo
 
         public override void Delete(IModel currency)
         {
-            GetCurrencyExchangerContext().Currency.Remove((CurrencyExchanger.packages.model.Currency)currency);
+            GetCurrencyExchangerContext().Currency.Remove((Abstract.model.Currency)currency);
             GetCurrencyExchangerContext().SaveChanges();
         }
 

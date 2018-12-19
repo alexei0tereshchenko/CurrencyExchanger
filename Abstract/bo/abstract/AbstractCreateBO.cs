@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CurrencyExchanger.packages.bo.@abstract
+namespace Abstract.bo.@abstract
 {
     public abstract class AbstractCreateBO: AbstractBO
     {

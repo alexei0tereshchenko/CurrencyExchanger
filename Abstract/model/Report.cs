@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CurrencyExchanger.packages.model
+namespace Abstract.model
 {
     public partial class Report:IModel
     {

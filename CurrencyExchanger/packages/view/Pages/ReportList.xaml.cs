@@ -1,18 +1,17 @@
 ﻿using System.Windows.Controls;
 using Currency.bo;
-using CurrencyExchanger.packages.model;
 using Person.bo;
 using Report.bo;
 using User.bo;
 
-namespace CurrencyExchanger.Pages
+namespace CurrencyExchanger.packages.view.Pages
 {
     public partial class ReportList : UserControl
     {
         public ReportList()
         {
             InitializeComponent();
-            foreach (var report in (packages.model.Report[]) GetReportsBO.GetInstance().DoRead())
+            foreach (var report in (Abstract.model.Report[]) GetReportsBO.GetInstance().DoRead())
             {
                 var user = GetEmployeeBO.GetUserById(report.UserId);
                 var currency = GetCurrencyBO.GetCurrencyById(report.CurrencyId);

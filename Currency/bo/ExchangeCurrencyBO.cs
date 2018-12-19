@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Windows;
-using CurrencyExchanger.packages.bo.@abstract;
+using Abstract.bo.@abstract;
 using FirstFloor.ModernUI.Windows.Controls;
 using Person.bo;
 using Report.bo;
@@ -17,7 +17,7 @@ namespace Currency.bo
             var person = GetCustomerBO.GetCustomerByPassportId(passportId);
             if (person == null)
             {
-                person = new CurrencyExchanger.packages.model.Person
+                person = new Abstract.model.Person
                 {
                     FirstName = personFirstName, LastName = personLastName, BirthDate = birthDate,
                     PassportSeries = passportSeries, PassportId = passportId
@@ -41,7 +41,7 @@ namespace Currency.bo
                 return;
             }
 
-            var outReport = new CurrencyExchanger.packages.model.Report
+            var outReport = new Abstract.model.Report
             {
                 UserId = SessionService.GetInstance().User.UserId,
                 PersonId = person.PersonId,
@@ -57,10 +57,10 @@ namespace Currency.bo
                                      " units of currency.", "Success!", MessageBoxButton.OK);
         }
 
-        private static bool ValidateForDailyLimits(double amount, CurrencyExchanger.packages.model.Currency currency)
+        private static bool ValidateForDailyLimits(double amount, Abstract.model.Currency currency)
         {
             const int maxDayLimit = 1000;
-            var dailyAmountExchanged = ((CurrencyExchanger.packages.model.Report[]) GetReportsBO.GetInstance().DoRead())
+            var dailyAmountExchanged = ((Abstract.model.Report[]) GetReportsBO.GetInstance().DoRead())
                 .Where(report =>
                     currency.CurrencyId.Equals(report.CurrencyId) &&
                     DateTime.Now.ToShortDateString().Equals(report.Date.ToShortDateString()))

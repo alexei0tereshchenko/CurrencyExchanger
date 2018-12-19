@@ -1,7 +1,6 @@
 ﻿using FirstFloor.ModernUI.Windows.Controls;
 using System.Windows;
-using CurrencyExchanger.packages.model;
-using CurrencyExchanger.pages;
+using CurrencyExchanger.packages.view.Pages;
 using User.bo;
 
 namespace CurrencyExchanger.packages.view.Dialogs
@@ -27,7 +26,7 @@ namespace CurrencyExchanger.packages.view.Dialogs
             if (TextFirstName.Text != "" && TextLastName.Text != "" && LoginBox.Text != "" &&
                 PasswordBox.Password != "" && PasswordBox.Password.Equals(RepeatPasswordBox.Password))
             {
-                var newUser = new model.User
+                var newUser = new Abstract.model.User
                 {
                     Login = LoginBox.Text, Password = PasswordBox.Password, FirstName = TextFirstName.Text,
                     LastName = TextLastName.Text, City = TextCity.Text, BirthDate = DateBirth.SelectedDate,

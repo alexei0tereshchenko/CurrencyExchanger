@@ -1,6 +1,6 @@
 using System.Linq;
-using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
+using Abstract.bo.@abstract;
+using Abstract.model;
 
 namespace Report.bo
 {

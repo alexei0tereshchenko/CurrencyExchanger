@@ -1,6 +1,6 @@
 using System.Linq;
-using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
+using Abstract.bo.@abstract;
+using Abstract.model;
 
 namespace Person.bo
 {
@@ -11,12 +11,12 @@ namespace Person.bo
             return GetCurrencyExchangerContext().Person.ToArray();
         }
         
-        public static CurrencyExchanger.packages.model.Person GetCustomerByPassportId(string passportId)
+        public static Abstract.model.Person GetCustomerByPassportId(string passportId)
         {
             return GetCurrencyExchangerContext().Person.FirstOrDefault(p => p.PassportId.Equals(passportId));
         }
 
-        public static CurrencyExchanger.packages.model.Person GetPersonById(int personId)
+        public static Abstract.model.Person GetPersonById(int personId)
         {
             return GetCurrencyExchangerContext().Person.FirstOrDefault(p => p.PersonId.Equals(personId));
         }

@@ -2,14 +2,13 @@
 using System.Windows;
 using System.Windows.Controls;
 using Currency.bo;
-using CurrencyExchanger.packages.model;
 using CurrencyExchanger.packages.view.Pages;
 
 namespace CurrencyExchanger.packages.view.Dialogs
 {
     public partial class DeleteCurrencyDialog : ModernDialog
     {
-        private static model.Currency[] Currencies { get; set; }
+        private static Abstract.model.Currency[] Currencies { get; set; }
 
         public ExchangeRate ExchangeRatePage { private get; set; }
 
@@ -23,7 +22,7 @@ namespace CurrencyExchanger.packages.view.Dialogs
         private void ReloadContent()
         {
             CurrencyBox.Items.Clear();
-            Currencies = (model.Currency[]) GetCurrencyBO.GetInstance().DoRead();
+            Currencies = (Abstract.model.Currency[]) GetCurrencyBO.GetInstance().DoRead();
             foreach (var currency in Currencies)
             {
                 CurrencyBox.Items.Add(new ComboBoxItem {Content = currency.CurrencyName});

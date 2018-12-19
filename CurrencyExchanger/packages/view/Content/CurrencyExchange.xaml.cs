@@ -2,16 +2,15 @@
 using System.Windows;
 using System.Windows.Controls;
 using Currency.bo;
-using CurrencyExchanger.packages.model;
 
-namespace CurrencyExchanger.Content
+namespace CurrencyExchanger.packages.view.Content
 {
     public partial class CurrencyExchange : UserControl
     {
         public CurrencyExchange()
         {
             InitializeComponent();
-            foreach (var currency in (packages.model.Currency[]) GetCurrencyBO.GetInstance().DoRead())
+            foreach (var currency in (Abstract.model.Currency[]) GetCurrencyBO.GetInstance().DoRead())
             {
                 ExchangingCurrency.Items.Add(new ComboBoxItem {Content = currency.CurrencyName});
             }

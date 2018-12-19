@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace CurrencyExchanger.Pages
+namespace CurrencyExchanger.packages.view.Pages
 {
     public partial class CurrencyExchange : UserControl
     {
@@ -13,7 +13,7 @@ namespace CurrencyExchanger.Pages
         {
             var mainWindow = new MainWindow();
             mainWindow.Show();
-            Window.GetWindow(this).Close();
+            Window.GetWindow(this)?.Close();
         }
     }
 }

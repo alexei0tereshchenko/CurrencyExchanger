@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CurrencyExchanger.packages.bo.@abstract;
+using Abstract.bo.@abstract;
 
 namespace Person.bo
 {
@@ -9,8 +9,9 @@ namespace Person.bo
     {
         public override void DoCreate(Dictionary<string, object> parameters)
         {
-            var person = new CurrencyExchanger.packages.model.Person();
-            
+            var person1 = new Abstract.model.Person();
+            var person = person1;
+                        
             foreach (var row in parameters)
             {
                 if (row.Key.Equals("FirstName"))
@@ -43,7 +44,7 @@ namespace Person.bo
             GetCurrencyExchangerContext().SaveChanges();
         }
         
-        public static void CreateCustomer(CurrencyExchanger.packages.model.Person person)
+        public static void CreateCustomer(Abstract.model.Person person)
         {
             person.PersonId = 1;
             var persons = GetCurrencyExchangerContext().Person.ToArray();

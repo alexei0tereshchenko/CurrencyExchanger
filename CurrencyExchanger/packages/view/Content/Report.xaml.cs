@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace CurrencyExchanger.Content
+namespace CurrencyExchanger.packages.view.Content
 {
     public partial class Report : UserControl
     {

@@ -1,6 +1,6 @@
-using CurrencyExchanger.packages.model;
+using Abstract.model;
 
-namespace CurrencyExchanger.packages.bo.@abstract
+namespace Abstract.bo.@abstract
 {
     public abstract class AbstractReadBO : AbstractBO
     {

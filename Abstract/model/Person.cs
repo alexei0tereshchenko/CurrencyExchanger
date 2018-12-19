@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CurrencyExchanger.packages.model
+namespace Abstract.model
 {
     public partial class Person:IModel
     {

@@ -154,17 +154,6 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="packages\model\Currency.cs" />
-    <Compile Include="packages\model\CurrencyExchangerContext.cs" />
-    <Compile Include="packages\model\IModel.cs" />
-    <Compile Include="packages\model\Person.cs" />
-    <Compile Include="packages\model\Report.cs" />
-    <Compile Include="packages\model\User.cs" />
-    <Compile Include="packages\bo\abstract\AbstractBO.cs" />
-    <Compile Include="packages\bo\abstract\AbstractCreateBO.cs" />
-    <Compile Include="packages\bo\abstract\AbstractDeleteBO.cs" />
-    <Compile Include="packages\bo\abstract\AbstractReadBO.cs" />
-    <Compile Include="packages\bo\abstract\AbstractUpdateBO.cs" />
     <Compile Include="packages\view\Content\CurrencyExchange.xaml.cs">
       <DependentUpon>CurrencyExchange.xaml</DependentUpon>
     </Compile>
@@ -281,6 +270,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Abstract\Abstract.csproj">
+      <Project>{df426d64-0801-44d8-a969-81c4f1171708}</Project>
+      <Name>Abstract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Currency\Currency.csproj">
       <Project>{3cd041af-bd7d-4ec0-81bb-9f005c321e24}</Project>
       <Name>Currency</Name>

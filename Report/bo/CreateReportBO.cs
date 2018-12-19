@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CurrencyExchanger.packages.bo.@abstract;
-using CurrencyExchanger.packages.model;
+using Abstract.bo.@abstract;
+using Abstract.model;
+
 
 namespace Report.bo
 {
@@ -10,7 +11,7 @@ namespace Report.bo
     {
         public override void DoCreate(Dictionary<string, object> parameters)
         {
-            var report = new CurrencyExchanger.packages.model.Report();
+            var report = new Abstract.model.Report();
             
             foreach (var row in parameters)
             {
@@ -52,7 +53,7 @@ namespace Report.bo
             GetCurrencyExchangerContext().SaveChanges();
         }
         
-        public static void CreateReport(CurrencyExchanger.packages.model.Report report)
+        public static void CreateReport(Abstract.model.Report report)
         {
             report.ReportId = 1;
             var reports = GetCurrencyExchangerContext().Report.ToArray();

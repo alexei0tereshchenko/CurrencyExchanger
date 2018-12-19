@@ -1,10 +1,10 @@
-﻿using FirstFloor.ModernUI.Windows;
-using System;
+﻿using System;
 using CurrencyExchanger.packages.view.Content;
-using CurrencyExchanger.pages;
+using CurrencyExchanger.packages.view.Pages;
+using FirstFloor.ModernUI.Windows;
 using User.bo;
 
-namespace CurrencyExchanger
+namespace CurrencyExchanger.packages.view.Loaders
 {
     class EmployeeLoader : DefaultContentLoader
     {

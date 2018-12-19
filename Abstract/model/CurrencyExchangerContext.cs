@@ -1,10 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
-namespace CurrencyExchanger.packages.model
+
+namespace Abstract.model
 {
     public sealed  class CurrencyExchangerContext : DbContext
     {
-        public CurrencyExchangerContext()
+        private CurrencyExchangerContext()
         {
+        }
+
+        private static CurrencyExchangerContext _instance;
+
+        public static CurrencyExchangerContext GetInstance()
+        {
+            return _instance ?? (_instance = new CurrencyExchangerContext());
         }
 
         public CurrencyExchangerContext(DbContextOptions<CurrencyExchangerContext> options)
