@@ -14,6 +14,7 @@
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Employees" Source="/packages/view/Pages/EmployeeList.xaml"/>
                 <mui:Link DisplayName="Report" Source="/packages/view/Pages/ReportList.xaml"/>
+                <mui:Link DisplayName="Exchange Rates" Source="/packages/view/Pages/ExchangeRate.xaml"/>
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
     </mui:ModernWindow.MenuLinkGroups>

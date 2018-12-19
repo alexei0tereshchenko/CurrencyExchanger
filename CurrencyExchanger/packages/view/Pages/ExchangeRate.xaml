@@ -16,7 +16,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0">
-            <StackPanel>
+            <StackPanel Name="EditCurrencyPanel">
                 <Label Content="Edit Currency Rate" Target="{Binding ElementName=EditCurrency}" />
                 <mui:ModernButton Name="EditCurrency"
                                   IconData="F1 M 53.2929,21.2929L 54.7071,22.7071C 56.4645,24.4645
@@ -41,7 +41,7 @@
             </StackPanel>
 
         </DockPanel>
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Name="DeleteCurrencyPanel">
             <Label Content="Delete Currency" Target="{Binding ElementName=DeleteCurrency}" />
             <mui:ModernButton Name="DeleteCurrency"
                               IconData="F1 M 25.3333,23.75L 50.6667,23.75C 51.5411,23.75

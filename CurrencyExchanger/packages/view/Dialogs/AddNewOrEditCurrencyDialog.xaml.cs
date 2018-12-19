@@ -21,6 +21,11 @@ namespace CurrencyExchanger.packages.view.Dialogs
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            if (Sell.Text == string.Empty || Purchase.Text == string.Empty)
+            {
+                return;
+            }
+
             if (GetCurrencyBO.GetCurrencyByName(CurrencyBox.Text) == null)
             {
                 var currency = new Abstract.model.Currency
@@ -37,7 +42,7 @@ namespace CurrencyExchanger.packages.view.Dialogs
                 var currency = GetCurrencyBO.GetCurrencyByName(CurrencyBox.Text);
                 currency.Purchase = double.Parse(Purchase.Text, CultureInfo.InvariantCulture.NumberFormat);
                 currency.Sell = double.Parse(Sell.Text, CultureInfo.InvariantCulture.NumberFormat);
-                
+
                 UpdateCurrencyBO.UpdateCurrency(currency);
                 ExchangeRatePage.Reload();
             }

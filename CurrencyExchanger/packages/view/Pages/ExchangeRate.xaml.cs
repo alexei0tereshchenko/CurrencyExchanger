@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Currency.bo;
 using CurrencyExchanger.packages.view.Dialogs;
+using User;
 
 namespace CurrencyExchanger.packages.view.Pages
 {
@@ -16,6 +17,11 @@ namespace CurrencyExchanger.packages.view.Pages
 
         public void Reload()
         {
+            if (SessionService.GetInstance().User.UserId!=1)
+            {
+                EditCurrencyPanel.Visibility = Visibility.Hidden;
+                DeleteCurrencyPanel.Visibility = Visibility.Hidden;
+            }
             _currencies = (Abstract.model.Currency[]) GetCurrencyBO.GetInstance().DoRead();
             var currencyDate = GetData();
             DG1.DataContext = currencyDate;
