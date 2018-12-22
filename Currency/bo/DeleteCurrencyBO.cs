@@ -1,11 +1,11 @@
-
-
+using System.Linq;
 using Abstract.bo.@abstract;
 using Abstract.model;
+using Report.bo;
 
 namespace Currency.bo
 {
-    public class DeleteCurrencyBO:AbstractDeleteBO
+    public class DeleteCurrencyBO : AbstractDeleteBO
     {
         private static DeleteCurrencyBO _instance;
 
@@ -20,7 +20,14 @@ namespace Currency.bo
 
         public override void Delete(IModel currency)
         {
-            GetCurrencyExchangerContext().Currency.Remove((Abstract.model.Currency)currency);
+            var reports = GetCurrencyExchangerContext().Report.Where(report =>
+                report.CurrencyId.Equals(((Abstract.model.Currency) currency).CurrencyId));
+            foreach (var report in reports)
+            {
+                DeleteReportBO.GetInstance().Delete(report);
+            }
+
+            GetCurrencyExchangerContext().Currency.Remove((Abstract.model.Currency) currency);
             GetCurrencyExchangerContext().SaveChanges();
         }
 
@@ -28,7 +35,7 @@ namespace Currency.bo
         {
             if (currencyName == string.Empty) return;
             var currency = GetCurrencyBO.GetCurrencyByName(currencyName);
-            if (currency==null) return;
+            if (currency == null) return;
             Delete(currency);
         }
     }

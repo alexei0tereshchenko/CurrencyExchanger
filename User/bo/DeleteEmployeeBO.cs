@@ -5,7 +5,7 @@ using Report.bo;
 
 namespace User.bo
 {
-    public class DeleteEmployeeBO:AbstractDeleteBO
+    public class DeleteEmployeeBO : AbstractDeleteBO
     {
         private static DeleteEmployeeBO _instance;
 
@@ -25,9 +25,9 @@ namespace User.bo
             foreach (var report in reports)
             {
                 DeleteReportBO.GetInstance().Delete(report);
-                GetCurrencyExchangerContext().SaveChanges();
             }
-            GetCurrencyExchangerContext().User.Remove((Abstract.model.User)user);
+
+            GetCurrencyExchangerContext().User.Remove((Abstract.model.User) user);
             GetCurrencyExchangerContext().SaveChanges();
         }
     }
