@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Abstract.bo.@abstract;
-using User = Abstract.model.User;
-
 namespace User.bo
 {
     public class UpdateEmployeeBO:AbstractUpdateBO
